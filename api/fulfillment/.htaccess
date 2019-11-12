@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Mossberg Fulfillment"
+AuthUserFile /data/mossberg/.htpasswd
+Require valid-user

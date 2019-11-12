@@ -1,0 +1,1008 @@
+# COMPRESSION - START
+<IfModule mod_deflate.c>
+SetOutputFilter DEFLATE
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+AddOutputFilterByType DEFLATE application/x-font
+AddOutputFilterByType DEFLATE application/x-font-opentype
+AddOutputFilterByType DEFLATE application/x-font-otf
+AddOutputFilterByType DEFLATE application/x-font-truetype
+AddOutputFilterByType DEFLATE application/x-font-ttf
+AddOutputFilterByType DEFLATE application/x-javascript
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE font/opentype
+AddOutputFilterByType DEFLATE font/otf
+AddOutputFilterByType DEFLATE font/ttf
+AddOutputFilterByType DEFLATE image/svg+xml
+AddOutputFilterByType DEFLATE image/x-icon
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/xml
+</IfModule>
+# COMPRESSION - END
+
+# EXPIRES - START
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 1 month"
+ExpiresByType image/x-icon "access plus 1 year"
+ExpiresByType image/x-icon "access plus 1 year"
+ExpiresByType image/gif "access plus 1 month"
+ExpiresByType image/png "access plus 1 month"
+ExpiresByType image/jpg "access plus 1 month"
+ExpiresByType image/jpeg "access plus 1 month"
+ExpiresByType text/css "access 1 month"
+ExpiresByType application/javascript "access plus 1 year"
+</IfModule>
+# EXPIRES - END
+
+# CACHE-CONTROL - START
+<filesMatch ".(css|jpg|jpeg|png|gif|js|ico)$">
+Header set Cache-Control "max-age=604800, public"
+</filesMatch>
+# CACHE-CONTROL - END
+
+# LOCKDOWN - START
+<IfModule mod_rewrite.c>
+RewriteEngine on
+#SG
+RewriteCond %{REMOTE_ADDR} !^69.119.93.245$
+#MB
+RewriteCond %{REMOTE_ADDR} !^144.121.254.250$
+RewriteCond %{REMOTE_ADDR} !^65.158.22.59$
+RewriteCond %{REMOTE_ADDR} !^67.131.112.147$
+RewriteCond %{REMOTE_ADDR} !^173.9.68.228$
+RewriteCond %{REMOTE_ADDR} !^64.206.106.248$
+RewriteCond %{REMOTE_ADDR} !^144.121.254.251$
+RewriteCond %{REMOTE_ADDR} !^104.226.3.163$
+RewriteCond %{REMOTE_ADDR} !^144.121.254.250$
+RewriteCond %{REMOTE_ADDR} !^104.226.3.162$
+RewriteCond %{REMOTE_ADDR} !^144.121.254.252$
+RewriteCond %{REMOTE_ADDR} !^104.226.3.164$
+#AX
+RewriteCond %{REMOTE_ADDR} !^172.85.57.242$
+#BT
+RewriteCond %{REMOTE_ADDR} !^66.30.84.203$
+#KB
+RewriteCond %{REMOTE_ADDR} !^71.232.3.193$
+RewriteCond %{REMOTE_ADDR} !^73.219.173.69$
+RewriteCond %{REMOTE_ADDR} !^73.186.89.6$
+RewriteCond %{REMOTE_ADDR} !^73.186.89.63$
+#LB
+RewriteCond %{REMOTE_ADDR} !^24.188.243.55$
+RewriteCond %{REMOTE_ADDR} !^24.188.246.132$
+#SC 
+RewriteCond %{REMOTE_ADDR} !^32.211.86.99$
+RewriteCond %{REMOTE_ADDR} !^104.245.19.241$
+RewriteCond %{REMOTE_ADDR} !^32.212.97.193$
+#I95
+RewriteCond %{REMOTE_ADDR} !^175.101.251.162$
+RewriteCond %{REMOTE_ADDR} !^175.101.251.163$
+RewriteCond %{REMOTE_ADDR} !^103.44.1.130$
+RewriteCond %{REMOTE_ADDR} !^103.44.1.131$
+#RGS
+RewriteCond %{REMOTE_ADDR} !^119.82.116.74$
+#AUTH
+RewriteCond %{REMOTE_ADDR} !^198.241.168.60$
+RewriteCond %{REMOTE_ADDR} !^198.241.162.104$
+RewriteCond %{REMOTE_ADDR} !^198.241.206.38$
+RewriteCond %{REMOTE_ADDR} !^198.241.207.38$
+#VI
+RewriteCond %{REMOTE_ADDR} !^14.142.195.6$
+RewriteCond %{REMOTE_ADDR} !^72.74.169.187$
+RewriteCond %{REMOTE_ADDR} !^223.225.26.23$
+RewriteCond %{REMOTE_ADDR} !^106.223.50.152$
+RewriteCond %{REMOTE_ADDR} !^180.151.13.172$
+RewriteCond %{REMOTE_ADDR} !^106.223.122.117$
+RewriteCond %{REMOTE_ADDR} !^106.223.41.93$
+RewriteCond %{REMOTE_ADDR} !^223.191.33.55$
+RewriteCond %{REMOTE_ADDR} !^182.69.22.113$
+RewriteCond %{REMOTE_ADDR} !^27.57.201.71$
+RewriteCond %{REMOTE_ADDR} !^112.196.144.94$
+RewriteCond %{REMOTE_ADDR} !^101.188.27.27$
+RewriteCond %{REMOTE_ADDR} !^106.223.39.39$
+RewriteCond %{REMOTE_ADDR} !^202.173.126.206$
+RewriteCond %{REMOTE_ADDR} !^103.41.38.27$
+RewriteCond %{REMOTE_ADDR} !^171.76.142.74$
+RewriteCond %{REMOTE_ADDR} !^66.31.163.50$
+RewriteCond %{REMOTE_ADDR} !^73.238.67.254$
+#DOMO
+RewriteCond %{REMOTE_ADDR} !^54.208.95.237$
+RewriteCond %{REMOTE_ADDR} !^54.208.87.122$
+RewriteCond %{REMOTE_ADDR} !^54.208.95.167$
+RewriteCond %{REMOTE_ADDR} !^54.208.94.194$
+RewriteCond %{REMOTE_ADDR} !^50.207.240.162$
+RewriteCond %{REMOTE_ADDR} !^50.207.241.62$
+RewriteCond %{REMOTE_ADDR} !^34.198.214.100$
+RewriteCond %{REMOTE_ADDR} !^52.62.103.83$
+RewriteCond %{REMOTE_ADDR} !^52.18.90.222$
+RewriteCond %{REMOTE_ADDR} !^40.76.8.174$
+RewriteCond %{REMOTE_ADDR} !^13.92.125.193$
+RewriteCond %{REMOTE_ADDR} !^54.209.160.124$
+RewriteCond %{REMOTE_ADDR} !^54.168.46.79$
+RewriteCond %{REMOTE_ADDR} !^107.21.98.1$
+#SELF
+RewriteCond %{REMOTE_ADDR} !%{SERVER_ADDR}$
+RewriteCond %{REMOTE_ADDR} !^104.45.155.252$
+RewriteCond %{REMOTE_ADDR} !^10.2.0.4$
+RewriteCond %{REMOTE_ADDR} !^50.255.185.121$
+# PROD Protect
+RewriteCond %{REQUEST_URI} ^(.*)?wp-login\.php(.*)$ [OR]
+RewriteCond %{REQUEST_URI} ^(.*)?wp-admin$ 
+RewriteRule ^(.*)$ - [R=403,L]
+# DEVSTAGE Protect
+#RewriteRule ^(.*)$ http://www.mossberg.com/$1 [L]
+# MIGRATION Redirect
+#RewriteCond %{REQUEST_URI} ^/parts-and-accessories/?$ [OR] 
+#RewriteCond %{REQUEST_URI} ^/service/request/?$ 
+#RewriteCond %{REQUEST_URI} !/maintenance/?$ [NC]
+#RewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif) [NC]
+#RewriteRule .* /maintenance [R=302,L]
+
+</IfModule>
+# LOCKDOWN - END
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+# Ecomm SKU URLs
+Redirect 301 /store/100008.html /store/mossberg-mvp-mmr-5-56mm-nato-223-magazine-30-round-100008.html
+Redirect 301 /store/100134.html /store/4-16x50mm-ao-varmint-rifle-scope-by-barska-100134.html
+Redirect 301 /store/100405MT.html /store/930-elevator-matte-100405mt.html
+Redirect 301 /store/100442.html /store/mossberg-mvp-mmr-7-62mm-nato-308-magazine-20-round-100442.html
+Redirect 301 /store/100472.html /store/tactical-flashlight-and-laser-combo-100472.html
+Redirect 301 /store/100473.html /store/1x30mm-red-dot-scope-by-barska-100473.html
+Redirect 301 /store/100478.html /store/utg-4-16x50-1-hunter-scope-ao-36-color-mil-dot-w-rings-100478.html
+Redirect 301 /store/100480.html /store/utg-6-24x50-1-hunter-scope-ao-36-color-mil-dot-w-rings-100480.html
+Redirect 301 /store/100932.html /store/mossberg-mvp-mmr-7-62mm-nato-308-magazine-10-round-100932.html
+Redirect 301 /store/101211.html /store/patriot-trigger-guard-screw-for-wood-stocks-101211.html
+Redirect 301 /store/101265.html /store/patriot-stock-synthetic-long-action-101265.html
+Redirect 301 /store/101265BUC.html /store/patriot-stock-break-up-country-long-action-101265buc.html
+Redirect 301 /store/101265HIG.html /store/patriot-stock-highlander-camo-long-action-101265hig.html
+Redirect 301 /store/101266.html /store/patriot-stock-synthetic-short-action-101266.html
+Redirect 301 /store/101266HIG.html /store/patriot-stock-highlander-camo-short-action-101266hig.html
+Redirect 301 /store/101268.html /store/patriot-bantam-stock-synthetic-short-action-101268.html
+Redirect 301 /store/101283.html /store/mossberg-flex-shotgun-case-101283.html
+Redirect 301 /store/101284.html /store/500-chainsaw-shotgun-case-101284.html
+Redirect 301 /store/101285.html /store/mvp-flex-rifle-case-black-101285.html
+Redirect 301 /store/101448.html /store/mvp-flex-rifle-case-od-green-101448.html
+Redirect 301 /store/101501.html /store/patriot-stock-walnut-long-action-101501.html
+Redirect 301 /store/101502.html /store/patriotstock-walnut-short-action-101502.html
+Redirect 301 /store/101504.html /store/patriot-bantam-stock-walnut-short-action-101504.html
+Redirect 301 /store/101538.html /store/laserlyte-cm-mk4-center-mass-red-laser-sight-101538.html
+Redirect 301 /store/101694BL.html /store/cartridge-stop-studded-12-20-gauge-blued-101694bl.html
+Redirect 301 /store/101768ODG.html /store/835-ulti-mag-12-gauge-security-barrel-18-5-od-green-101768odg.html
+Redirect 301 /store/101782MX5.html /store/935-magnum-12-gauge-waterfowl-barrel-28-max5-101782mx5.html
+Redirect 301 /store/101810.html /store/patriot-trigger-guard-for-wood-stocks-101810.html
+Redirect 301 /store/101854MTP.html /store/patriot-bolt-handle-assembly-short-action-matte-101854mtp.html
+Redirect 301 /store/102358.html /store/patriot-bantam-spacer-kit-synthetic-102358.html
+Redirect 301 /store/102370.html /store/patriot-stock-laminatelong-action-102370.html
+Redirect 301 /store/102371.html /store/patriot-stock-laminate-short-action-102371.html
+Redirect 301 /store/102471.html /store/rear-action-screw-wood-stock-102471.html
+Redirect 301 /store/102619BL.html /store/cartridge-stop-studded-102619bl.html
+Redirect 301 /store/102643.html /store/patriot-stock-od-green-short-action-102643.html
+Redirect 301 /store/102644.html /store/patriot-stock-od-green-long-action-102644.html
+Redirect 301 /store/102831.html /store/utg-1-4x28-30mm-mvp-scout-scope-extended-eye-relief-102831.html
+Redirect 301 /store/102909MX5.html /store/935-magnum-12-gauge-waterfowl-barrel-28-max5-102909mx5.html
+Redirect 301 /store/102936.html /store/dead-ringer-green-dot-sight-102936.html
+Redirect 301 /store/102971.html /store/nc-star-tactical-shotgun-scabbard-o-d-green-102971.html
+Redirect 301 /store/102972OB.html /store/535-ats-12-gauge-marble-arms-bullseye-fo-sights-22-mo-obsession-102972ob.html
+Redirect 301 /store/102975OB.html /store/835-ulti-full-12-gauge-barrel-fo-sights-24-mo-obsession-102975ob.html
+Redirect 301 /store/10301MT.html /store/500-20-gauge-security-barrel-bead-sight-18-5-matte-finish-10301mt.html
+Redirect 301 /store/103264.html /store/briley-m930-choke-tube-improved-cylinder-103264.html
+Redirect 301 /store/103265.html /store/briley-m930-choke-tube-modified-103265.html
+Redirect 301 /store/103266.html /store/briley-m930-choke-tube-skeet-103266.html
+Redirect 301 /store/10342.html /store/magazine-tube-6-shot-blued-10342.html
+Redirect 301 /store/103582.html /store/briley-m930-choke-tube-improved-modified-103582.html
+Redirect 301 /store/103583.html /store/briley-m930-choke-tube-full-103583.html
+Redirect 301 /store/103584.html /store/briley-choke-wrench-103584.html
+Redirect 301 /store/103585.html /store/briley-choke-case-103585.html
+Redirect 301 /store/103746.html /store/6-24x50-dead-ringer-scope-103746.html
+Redirect 301 /store/103747.html /store/4-16x50-dead-ringer-scope-103747.html
+Redirect 301 /store/103749.html /store/shotgun-stock-6-position-adjustable-stock-12-gauge-103749.html
+Redirect 301 /store/10934NBU.html /store/500-20-gauge-all-purpose-barrel-dual-bead-sights-26-mo-new-break-up-6-shot-10934nbu.html
+Redirect 301 /store/11091BUC.html /store/500-12-gauge-barrel-fo-sights-24-mo-break-up-country-6-shot-11091buc.html
+Redirect 301 /store/11091INF.html /store/500-12-gauge-barrel-fo-sights-24-mo-break-up-infinity-6-shot-11091inf.html
+Redirect 301 /store/11091OBFO.html /store/500-12-gauge-all-purpose-barrel-fo-adjustable-sights-24-mo-obsession-6-shot-11091obfo.html
+Redirect 301 /store/11091ODG.html /store/500-12-gauge-barrel-fo-sights-24-od-green-11091odg.html
+Redirect 301 /store/11120.html /store/stock-bolt-blued-11120.html
+Redirect 301 /store/11239.html /store/magazine-cap-for-590-a1-835-11239.html
+Redirect 301 /store/11603BL.html /store/action-slide-12-gauge-7-3-4-blued-11603bl.html
+Redirect 301 /store/11793BL.html /store/firing-pin-blue-11793bl.html
+Redirect 301 /store/11930BL.html /store/elevator-assembly-12gaugeblued-11930bl.html
+Redirect 301 /store/11934.html /store/ejector-12-gauge-11934.html
+Redirect 301 /store/12030.html /store/quick-detach-stud-front-blued-12030.html
+Redirect 301 /store/12032.html /store/quick-detach-swivel-loop-12032.html
+Redirect 301 /store/12105INF.html /store/835-ulti-mag-12-gauge-turkey-barrel-fo-sights-24-mo-break-up-infinity-12105inf.html
+Redirect 301 /store/12105OBFOP.html /store/835-ulti-mag-12-gauge-turkey-barrel-fo-sights-24-mo-obsession-12105obfop.html
+Redirect 301 /store/12113MT.html /store/magazine-tube-12113mt.html
+Redirect 301 /store/12146.html /store/quick-detach-stud-washer-12146.html
+Redirect 301 /store/12153.html /store/mid-sight-for-vent-rib-brass-12153.html
+Redirect 301 /store/12156.html /store/front-bead-for-vent-rib-barrel-white-12156.html
+Redirect 301 /store/12170.html /store/magazine-tube-dowel-12170.html
+Redirect 301 /store/12194.html /store/spring-magazine-12194.html
+Redirect 301 /store/12303.html /store/dummy-screw-8-40-blued-12303.html
+Redirect 301 /store/12354bl.html /store/forearm-action-assembly-12g-blued-12354bl.html
+Redirect 301 /store/12362BL.html /store/action-slide-12-gauge-6-3-4-blued-12362bl.html
+Redirect 301 /store/12392BL.html /store/magazine-spring-retainer-12392bl.html
+Redirect 301 /store/12489.html /store/shotgun-stock-synthetic-410-bore-12489.html
+Redirect 301 /store/12761.html /store/rh-extractor-12-20-gauge-blued-12761.html
+Redirect 301 /store/12762.html /store/lh-extractor-12-20-gauge-blued-12762.html
+Redirect 301 /store/12770INF.html /store/500-20-gauge-all-purpose-barrel-dual-bead-sights-22-mo-break-up-infinity-12770inf.html
+Redirect 301 /store/12770RTX.html /store/500-20-gauge-all-purpose-barrel-dual-bead-sight-22-realtree-xtra-6-shot-12770rtx.html
+Redirect 301 /store/12984INF.html /store/500-20-gauge-slug-barrel-rifle-sights-24-mo-break-up-infinity-12984inf.html
+Redirect 301 /store/13483WS.html /store/shotgun-forearm-wood-12-gauge-fits-6-3-4-action-slide-13483ws.html
+Redirect 301 /store/13488.html /store/action-slide-nut-12-gauge-blued-for-6-3-4-slide-assembly-13488.html
+Redirect 301 /store/13608.html /store/shotgun-stock-wood-410-bore-13608.html
+Redirect 301 /store/13608WS.html /store/shotgun-stock-wood-410-bore-13608ws.html
+Redirect 301 /store/13612WS.html /store/shotgun-stock-wood-20-gauge-13612ws.html
+Redirect 301 /store/14480WS.html /store/shotgun-stock-wood-12-gauge-14480ws.html
+Redirect 301 /store/14629.html /store/firing-pin-spring-14629.html
+Redirect 301 /store/14672.html /store/shotgun-stock-synthetic-20-gauge-14672.html
+Redirect 301 /store/14757RTX.html /store/500-20-gauge-slug-barrel-cantilever-mount-24-realtree-xtra-6-shot-14757rtx.html
+Redirect 301 /store/14980.html /store/930-935-extractor-14980.html
+Redirect 301 /store/1538BL.html /store/ejector-12-gauge-blued-1538bl.html
+Redirect 301 /store/1539BL.html /store/ejector-screw-blued-1539bl.html
+Redirect 301 /store/1544.html /store/firing-pin-r-h-extractor-pin-1544.html
+Redirect 301 /store/1554BL.html /store/magazine-follower-12-gauge-blued-1554bl.html
+Redirect 301 /store/1561.html /store/detent-ball-bolt-action-1561.html
+Redirect 301 /store/1571BL.html /store/stock-bolt-washer-1571bl.html
+Redirect 301 /store/1580BL.html /store/trigger-housing-retaining-pin-12-gauge-blued-1580bl.html
+Redirect 301 /store/1585.html /store/extractor-spring-1585.html
+Redirect 301 /store/1599.html /store/l-h-extractor-ret-pin-1599.html
+Redirect 301 /store/16079.html /store/shotgun-stock-synthetic-12-gauge-16079.html
+Redirect 301 /store/16080.html /store/recoil-pad-for-synthetic-stock-16080.html
+Redirect 301 /store/16759.html /store/930-935-stock-synthetic-12-gauge-16759.html
+Redirect 301 /store/16760BL.html /store/restricted-930-935-bolt-buffer-assembly-blued-16760bl.html
+Redirect 301 /store/16762.html /store/930-935-bolt-buffer-screw-16762.html
+Redirect 301 /store/16765BL.html /store/930-935-stock-retention-nut-blued-16765bl.html
+Redirect 301 /store/16766.html /store/930-935-stock-nut-spacer-16766.html
+Redirect 301 /store/16767BL.html /store/930-935-stock-retention-plate-blued-16767bl.html
+Redirect 301 /store/16769.html /store/930-935-recoil-pad-screw-16769.html
+Redirect 301 /store/16772.html /store/930-935-forearm-retainer-16772.html
+Redirect 301 /store/16773.html /store/930-935-forearm-synthetic-12-gauge-16773.html
+Redirect 301 /store/16775BL.html /store/930-935-trigger-housing-retaining-pin-blued-16775bl.html
+Redirect 301 /store/16776.html /store/checkered-recoil-pad-for-synthetic-stock-16776.html
+Redirect 301 /store/16788.html /store/930-935-stock-pin-16788.html
+Redirect 301 /store/16789MT.html /store/930-935-magazine-cap-assembly-matte-16789mt.html
+Redirect 301 /store/16801.html /store/930-935-gas-piston-assembly-16801.html
+Redirect 301 /store/16801BN.html /store/930-935-pro-series-gas-piston-assembly-boron-nitride-finish-16801bn.html
+Redirect 301 /store/16809.html /store/930-935-magazine-spring-16809.html
+Redirect 301 /store/16818.html /store/930-935-magazine-plug-dowel-16818.html
+Redirect 301 /store/16822NBUFO.html /store/935-magnum-12-gauge-turkey-barrel-fo-sights-24-new-break-up-16822nbufo.html
+Redirect 301 /store/16822OB.html /store/935-magnum-12-gauge-barrel-fo-sights-24-mo-obsession-16822ob.html
+Redirect 301 /store/16835MX4.html /store/935-magnum-12-gauge-barrel-fo-sight-26-max4-16835mx4.html
+Redirect 301 /store/16836INF.html /store/935-magnum-12-gauge-all-purpose-barrel-fo-sight-28-break-up-infinity-16836inf.html
+Redirect 301 /store/16842.html /store/930-935-firing-pin-retaining-pin-16842.html
+Redirect 301 /store/16858.html /store/930-935-pusher-assembly-16858.html
+Redirect 301 /store/16862.html /store/930-935-gas-system-return-spring-16862.html
+Redirect 301 /store/16863AN.html /store/930-935-gas-piston-spacer-tube-anodize-16863an.html
+Redirect 301 /store/16875BL.html /store/930-935-link-pin-blued-16875bl.html
+Redirect 301 /store/16878.html /store/930-935-return-spring-tube-assembly-16878.html
+Redirect 301 /store/16881.html /store/930-935-return-spring-16881.html
+Redirect 301 /store/16882BL.html /store/930-935-return-spring-plunger-blued-16882bl.html
+Redirect 301 /store/16883.html /store/930-935-return-spring-retainer-16883.html
+Redirect 301 /store/16884BL.html /store/930-935-return-spring-tube-bushing-blued-16884bl.html
+Redirect 301 /store/16885BL.html /store/930-935-return-spring-pin-blued-16885bl.html
+Redirect 301 /store/16910OBFO.html /store/935-magnum-12-gauge-barrel-22-mo-obsession-16910obfo.html
+Redirect 301 /store/16916BUC.html /store/935-magnum-12-gauge-slug-barrel-rifle-sights-24-bu-country-16916buc.html
+Redirect 301 /store/16916INF.html /store/935-magnum-12-gauge-slug-barrel-rifle-sights-24-mo-break-up-infinity-16916inf.html
+Redirect 301 /store/16927.html /store/930-firing-pin-16927.html
+Redirect 301 /store/16928BL.html /store/930-link-blued-16928bl.html
+Redirect 301 /store/16970BL.html /store/930-12-gauge-all-purpose-barrel-28-blued-16970bl.html
+Redirect 301 /store/16970MX4.html /store/930-12-gauge-all-purpose-barrel-28-rt-max-4-16970mx4.html
+Redirect 301 /store/16970YET.html /store/930-12-gauge-all-purpose-barrel-28-yeti-16970yet.html
+Redirect 301 /store/16975OBFO.html /store/930-12-gauge-turkey-barrel-fo-sights-24-mo-obsession-16975obfo.html
+Redirect 301 /store/17030.html /store/fiber-optic-turkey-snap-on-front-sight-green-17030.html
+Redirect 301 /store/17031.html /store/fiber-optic-turkey-snap-on-rear-sight-red-17031.html
+Redirect 301 /store/17078.html /store/spring-bolt-stop-17078.html
+Redirect 301 /store/17089.html /store/ejector-pin-bolt-action-17089.html
+Redirect 301 /store/170BL.html /store/recoil-pad-screw-170bl.html
+Redirect 301 /store/171.html /store/recoil-pad-screw-171.html
+Redirect 301 /store/17104BL.html /store/bolt-stop-screw-blued-17104bl.html
+Redirect 301 /store/17126.html /store/extractor-bolt-action-17126.html
+Redirect 301 /store/17128.html /store/extractor-spring-bolt-action-17128.html
+Redirect 301 /store/17129.html /store/ejector-bolt-action-17129.html
+Redirect 301 /store/17130.html /store/ejector-spring-bolt-action-17130.html
+Redirect 301 /store/17142.html /store/front-action-screw-17142.html
+Redirect 301 /store/17147.html /store/rear-action-screw-synthetic-stock-17147.html
+Redirect 301 /store/17166.html /store/bushnell-sharpshooter-4x32mm-matte-17166.html
+Redirect 301 /store/17223.html /store/synthetic-hunting-stock-12-gauge-pump-17223.html
+Redirect 301 /store/17240OB.html /store/500-20-gauge-barrel-fo-sights-22-mo-obsession-6-shot-17240ob.html
+Redirect 301 /store/17240SGB.html /store/500-20-gauge-turkey-barrel-fiber-optic-sights-22-mo-shadowgrass-blades-17240sgb.html
+Redirect 301 /store/17241.html /store/500-20-gauge-all-purpose-barrel-24-blued-6-shot-17241.html
+Redirect 301 /store/17241INF.html /store/500-20-gauge-turkey-barrel-fiber-optic-sights-24-mo-break-up-infinity-17241inf.html
+Redirect 301 /store/17243INF.html /store/835-ulti-mag-12-gauge-turkey-barrel-fo-sights-20-mo-break-up-infinity-17243inf.html
+Redirect 301 /store/17243OB.html /store/835-ulti-full-12-gauge-barrel-fo-sights-20-mo-mossy-oak-obsession-17243ob.html
+Redirect 301 /store/17366OB.html /store/535-ats-12-gauge-vent-rib-barrel-fo-adjustable-sights-22-mo-obsession-17366ob.html
+Redirect 301 /store/17367AP.html /store/535-ats-12-gauge-slug-barrel-rifle-sights-24-realtree-ap-17367ap.html
+Redirect 301 /store/17367INF.html /store/535-ats-12-gauge-slug-barrel-rifle-sights-24-mo-break-up-infinity-17367inf.html
+Redirect 301 /store/17367NBU.html /store/535-ats-12-gauge-slug-barrel-rifle-sights-24-mo-new-break-up-17367nbu.html
+Redirect 301 /store/17369MT.html /store/535-ats-12-gauge-waterfowl-barrel-28-matte-17369mt.html
+Redirect 301 /store/17369MX4.html /store/535-ats-12-gauge-waterfowl-barrel-28-rt-max-4-17369mx4.html
+Redirect 301 /store/17452MT.html /store/930-935-operating-handle-matte-17452mt.html
+Redirect 301 /store/17473BL.html /store/930-935-front-dummy-screw-blued-17473bl.html
+Redirect 301 /store/17616.html /store/shotgun-stock-6-position-adjustable-stock-12-gauge-17616.html
+Redirect 301 /store/1765BL.html /store/elevator-12-gauge-blued-1765bl.html
+Redirect 301 /store/1765HP.html /store/elevator-12-gauge-high-polished-1765hp.html
+Redirect 301 /store/1765PF.html /store/elevator-12-gauge-polished-1765pf.html
+Redirect 301 /store/17946BL.html /store/forearm-assembly-17946bl.html
+Redirect 301 /store/17962.html /store/magazine-guide-assembly-short-action-17962.html
+Redirect 301 /store/18581BL.html /store/dummy-screw-18581bl.html
+Redirect 301 /store/18667.html /store/weaver-style-scope-base-18667.html
+Redirect 301 /store/18801BL.html /store/bolt-head-assembly-pin-18801bl.html
+Redirect 301 /store/18821MT.html /store/striker-assembly-18821mt.html
+Redirect 301 /store/19275MT.html /store/bolt-stop-matte-19275mt.html
+Redirect 301 /store/19297.html /store/930-oversized-charging-handle-19297.html
+Redirect 301 /store/19297MT.html /store/930-oversized-charging-handle-19297mt.html
+Redirect 301 /store/19388AP.html /store/535-ats-12-gauge-slug-barrel-cantilever-mount-24-fluted-realtree-ap-19388ap.html
+Redirect 301 /store/19388RTX.html /store/535-ats-12-gauge-slug-barrel-fluted-cantilever-mount-24-realtree-xtra-19388rtx.html
+Redirect 301 /store/19389INF.html /store/535-ats-12-gauge-slug-barrel-rifle-sights-24-fluted-mo-break-up-infinity-19389inf.html
+Redirect 301 /store/19406AP.html /store/835-ulti-mag-12-gauge-slug-barrel-rifle-sights-24-fluted-realtree-ap-19406ap.html
+Redirect 301 /store/19443.html /store/magazine-and-guide-assembly-short-action-19443.html
+Redirect 301 /store/19542.html /store/6-shot-magazine-spring-19542.html
+Redirect 301 /store/19584.html /store/mossberg-mvp-mmr-5-56mm-nato-223-magazine-10-round-19584.html
+Redirect 301 /store/19764.html /store/ar-15-standard-a-2-stock-with-extension-tube-spring-and-buffer-19764.html
+Redirect 301 /store/19764BR.html /store/ar-15-standard-a-2-stock-with-extension-tube-spring-and-buffer-mossy-oak-brush-19764br.html
+Redirect 301 /store/19764TS.html /store/ar-15-standard-a-2-stock-with-extension-tube-spring-and-buffer-mossy-oak-treestand-camo-19764ts.html
+Redirect 301 /store/19841.html /store/mossberg-mvp-mmr-5-56mm-nato-223-magazine-5-round-19841.html
+Redirect 301 /store/19944.html /store/mossberg-mvp-mmr-7-62mm-nato-308-magazine-5-round-19944.html
+Redirect 301 /store/19990.html /store/bsa-red-dot-sight-19990.html
+Redirect 301 /store/2090.html /store/recoil-pad-for-wood-stocks-requires-fitting-2090.html
+Redirect 301 /store/2322.html /store/front-bead-for-plain-barrel-brass-2322.html
+Redirect 301 /store/3408.html /store/action-slide-nut-12-gauge-blued-for-7-3-4-slide-assembly-3408.html
+Redirect 301 /store/3874BL.html /store/takedown-screw-assembly-blued-3874bl.html
+Redirect 301 /store/5393.html /store/takedown-screw-retaining-ring-5393.html
+Redirect 301 /store/5866BL.html /store/930-935-magazine-follower-12-gauge-blued-5866bl.html
+Redirect 301 /store/5868BL.html /store/930-935-magazine-spring-retainer-blued-5868bl.html
+Redirect 301 /store/5877BL.html /store/930-935-shell-stop-pivot-pin-blued-5877bl.html
+Redirect 301 /store/5878.html /store/930-935-pivot-pin-retaining-clip-5878.html
+Redirect 301 /store/5885.html /store/930-935-firing-pin-spring-5885.html
+Redirect 301 /store/5946BL.html /store/930-935-forend-cap-detent-blued-5946bl.html
+Redirect 301 /store/6495.html /store/buttstock-spacer-for-wood-stocks-requires-fitting-6495.html
+Redirect 301 /store/6641.html /store/quick-detach-stud-rear-for-synthetic-stocks-6641.html
+Redirect 301 /store/6702.html /store/barrel-assembly-6702.html
+Redirect 301 /store/6846.html /store/rear-swivel-stud-blued-6846.html
+Redirect 301 /store/7429.html /store/firing-pin-collar-12-gauge-7429.html
+Redirect 301 /store/7607BL.html /store/cartridge-interrupter-assembly-12-gauge-blued-7607bl.html
+Redirect 301 /store/7613BL.html /store/lock-washer-blued-7613bl.html
+Redirect 301 /store/90015.html /store/500-12-gauge-security-barrel-18-5-blued-6-shot-90015.html
+Redirect 301 /store/90016.html /store/500-12-gauge-security-barrel-18-5-matte-6-shot-90016.html
+Redirect 301 /store/90017.html /store/500-12-gauge-security-barrel-breacher-18-5-matte-6-shot-90017.html
+Redirect 301 /store/90018.html /store/500-12-gauge-security-barrel-breacher-18-5-blued-6-shot-90018.html
+Redirect 301 /store/90019.html /store/500-12-gauge-all-purpose-barrel-20-matte-blue-90019.html
+Redirect 301 /store/90048.html /store/remington-870-12-gauge-slug-barrel-rifle-sights-24-blued-90048.html
+Redirect 301 /store/90055.html /store/500-12-gauge-slug-barrel-rifle-sights-24-blued-90055.html
+Redirect 301 /store/90058.html /store/500-20-gauge-slug-barrel-cantilever-mount-24-matte-blue-90058.html
+Redirect 301 /store/90059.html /store/500-20-gauge-slug-barrel-rifle-sights-24-matte-blue-6-shot-90059.html
+Redirect 301 /store/90060.html /store/500-20-gauge-slug-barrel-rifle-sights-24-blued-90060.html
+Redirect 301 /store/90061.html /store/500-20-gauge-all-purpose-barrel-bead-sight-26-matte-blue-6-shot-90061.html
+Redirect 301 /store/90063.html /store/500-20-gauge-slug-barrel-with-cantilever-mount-24-blued-90063.html
+Redirect 301 /store/90064.html /store/500-20-gauge-slug-barrel-rifle-sights-24-matte-blue-90064.html
+Redirect 301 /store/90120.html /store/500-12-gauge-slug-barrel-rifle-sights-24-matte-blue-90120.html
+Redirect 301 /store/90121.html /store/500-12-gauge-slug-barrel-rifle-sights-24-matte-blue-90121.html
+Redirect 301 /store/90122.html /store/500-12-gauge-all-purpose-barrel-bead-sight-24-matte-blue-6-shot-90122.html
+Redirect 301 /store/90123.html /store/500-12-gauge-all-purpose-barrel-bead-sight-28-matte-blue-6-shot-90123.html
+Redirect 301 /store/90130.html /store/500-12-gauge-all-purpose-barrel-28-blued-6-shot-90130.html
+Redirect 301 /store/90135.html /store/500-12-gauge-all-purpose-barrel-24-blued-6-shot-90135.html
+Redirect 301 /store/90136.html /store/500-20-gauge-all-purpose-barrel-26-blued-90136.html
+Redirect 301 /store/90140.html /store/500-12-gauge-all-purpose-barrel-20-blued-6-shot-90140.html
+Redirect 301 /store/90335.html /store/remington-870-12-gauge-security-barrel-breacher-18-5-blued-90335.html
+Redirect 301 /store/90560.html /store/shotgun-stock-synthetic-orange-12-gauge-90560.html
+Redirect 301 /store/90565.html /store/shotgun-forearm-synthetic-orange-12-gauge-fits-7-3-4-action-slide-90565.html
+Redirect 301 /store/90800.html /store/835-ulti-mag-12-gauge-slug-barrel-rifle-sights-24-blued-90800.html
+Redirect 301 /store/90804.html /store/835-ulti-mag-12-gauge-slug-barrel-rifle-sights-24-matte-blue-90804.html
+Redirect 301 /store/90805.html /store/835-ulti-mag-12-gauge-slug-barrel-rifle-sights-24-matte-blue-90805.html
+Redirect 301 /store/90806.html /store/835-ulti-mag-12-gauge-slug-barrel-cantilever-mount-24-mo-break-up-country-90806.html
+Redirect 301 /store/90807.html /store/835-ulti-mag-12-gauge-all-purpose-barrel-vent-rib-28-mo-break-up-country-90807.html
+Redirect 301 /store/90808.html /store/835-ulti-mag-12-gauge-all-purpose-barrel-vent-rib-28-mo-obsession-90808.html
+Redirect 301 /store/90820.html /store/835-ulti-mag-12-gauge-slug-barrel-cantilever-mount-24-blued-90820.html
+Redirect 301 /store/90831.html /store/835-ulti-mag-12-gauge-all-purpose-barrel-28-matte-90831.html
+Redirect 301 /store/90835.html /store/835-ulti-mag-12-gauge-slug-barrel-cantilever-mount-mounted-scope-24-blued-90835.html
+Redirect 301 /store/90910.html /store/935-magnum-12-gauge-slug-barrel-rifle-sights-24-matte-90910.html
+Redirect 301 /store/90911.html /store/935-magnum-12-gauge-all-purpose-barrel-28-mo-break-up-country-90911.html
+Redirect 301 /store/90912.html /store/935-magnum-12-gauge-slug-barrel-rifle-sights-24-mo-break-up-country-90912.html
+Redirect 301 /store/90913.html /store/935-magnum-12-gauge-slug-barrel-cantilever-mount-24-mo-break-up-country-90913.html
+Redirect 301 /store/90920.html /store/935-magnum-12-gauge-slug-barrel-cantilever-mount-24-matte-90920.html
+Redirect 301 /store/90931.html /store/935-magnum-turkey-barrel-24-mo-new-break-up-90931.html
+Redirect 301 /store/90932.html /store/935-magnum-waterfowl-barrel-28-mo-new-break-up-90932.html
+Redirect 301 /store/91004.html /store/mossberg-intl-silver-reserve-ii-over-under-shotgun-case-91004.html
+Redirect 301 /store/91048.html /store/remington-870-12-gauge-slug-barrel-rifle-sights-24-matte-91048.html
+Redirect 301 /store/91300.html /store/535-ats-12-gauge-waterfowl-barrel-28-mo-break-up-91300.html
+Redirect 301 /store/91301.html /store/535-ats-12-gauge-waterfowl-barrel-28-break-up-country-91301.html
+Redirect 301 /store/91302.html /store/535-ats-12-gauge-waterfowl-barrel-28-blued-91302.html
+Redirect 301 /store/91303.html /store/535-ats-12-gauge-slug-barrel-24-break-up-country-91303.html
+Redirect 301 /store/91304.html /store/535-ats-12-gauge-slug-barrel-24-blued-91304.html
+Redirect 301 /store/91305.html /store/535-ats-12-gauge-slug-barrel-cantilever-mount-24-break-up-country-91305.html
+Redirect 301 /store/91306.html /store/535-ats-12-gauge-slug-barrel-cantilever-mount-24-blued-91306.html
+Redirect 301 /store/91310.html /store/535-ats-12-gauge-slug-barrel-rifle-sights-24-mo-new-break-up-91310.html
+Redirect 301 /store/91315.html /store/535-ats-12-gauge-slug-barrel-cantilever-mount-24-mo-new-break-up-91315.html
+Redirect 301 /store/91335.html /store/remington-870-12-gauge-security-barrel-breacher-18-5-matte-blue-91335.html
+Redirect 301 /store/91356.html /store/remington-870-12-gauge-slug-barrel-cantilever-mount-24-matte-91356.html
+Redirect 301 /store/92010.html /store/500-20-gauge-slug-barrel-cantilever-mount-scope-24-blued-6-shot-92010.html
+Redirect 301 /store/92049.html /store/500-12-gauge-slug-barrel-rifle-sights-24-blued-6-shot-92049.html
+Redirect 301 /store/92056.html /store/500-12-gauge-slug-barrel-with-cantilever-mount-with-rifle-sights-24-blued-6-shot-92056.html
+Redirect 301 /store/92062.html /store/500-20-gauge-slug-barrel-rifle-sights-24-blued-92062.html
+Redirect 301 /store/92156.html /store/500-12-gauge-slug-barrel-with-cantilever-mount-mounted-scope-24-blued-92156.html
+Redirect 301 /store/92256.html /store/500-12-gauge-slug-barrel-with-cantilever-mount-24-matte-6-shot-92256.html
+Redirect 301 /store/92356.html /store/remington-870-12-gauge-slug-barrel-cantilever-mount-mounted-scope-24-matte-blue-92356.html
+Redirect 301 /store/92514.html /store/514-barrel-kit-includes-14-heavy-wall-barrel-6-shot-92514.html
+Redirect 301 /store/92802.html /store/835-ulti-mag-12-gauge-slug-barrel-rifle-sights-24-blued-92802.html
+Redirect 301 /store/92830.html /store/835-ulti-mag-12-gauge-slug-barrel-cantilever-mount-24-matte-92830.html
+Redirect 301 /store/93010.html /store/930-12-gauge-slug-barrel-rifle-sights-24-matte-93010.html
+Redirect 301 /store/93017.html /store/930-12-gauge-turkey-barrel-vent-rib-24-mo-break-up-country-93017.html
+Redirect 301 /store/93019.html /store/930-12-gauge-all-purpose-vent-rib-28-mo-break-up-country-93019.html
+Redirect 301 /store/93021.html /store/930-12-gauge-all-purpose-barrel-28-matte-93021.html
+Redirect 301 /store/93025.html /store/930-12-gauge-turkey-barrel-24-matte-93025.html
+Redirect 301 /store/93026.html /store/930-12-gauge-barrel-fo-sights-24-mo-new-break-up-93026.html
+Redirect 301 /store/93030.html /store/930-12-gauge-slug-barrel-cantilever-mount-24-matte-93030.html
+Redirect 301 /store/93035.html /store/930-12-gauge-security-barrel-breacher-18-5-matte-93035.html
+Redirect 301 /store/93356.html /store/remington-870-12-gauge-security-barrel-breacher-18-5-matte-93356.html
+Redirect 301 /store/93501.html /store/shotgun-bandolier-93501.html
+Redirect 301 /store/93502.html /store/shotgun-belt-93502.html
+Redirect 301 /store/93503.html /store/stock-mounted-shell-carrier-93503.html
+Redirect 301 /store/93504.html /store/belt-mounted-shell-carrier-93504.html
+Redirect 301 /store/93505.html /store/neoprene-hunting-sling-camo-93505.html
+Redirect 301 /store/93506.html /store/padded-hunting-sling-camo-93506.html
+Redirect 301 /store/93507.html /store/padded-hunting-sling-black-93507.html
+Redirect 301 /store/93508.html /store/padded-hunting-sling-tan-93508.html
+Redirect 301 /store/93509.html /store/bantam-youth-sling-black-93509.html
+Redirect 301 /store/93510.html /store/bantam-youth-sling-camo-93510.html
+Redirect 301 /store/93511.html /store/pak-rat-quick-clip-93511.html
+Redirect 301 /store/93512.html /store/pak-rat-shotgun-rifle-support-kit-93512.html
+Redirect 301 /store/93513.html /store/talon-grips-granulate-for-590-shockwave-93513.html
+Redirect 301 /store/93514.html /store/talon-grips-rubberized-for-590-shockwave-93514.html
+Redirect 301 /store/95000.html /store/shotgun-stock-pistol-grip-kit-12-gauge-95000.html
+Redirect 301 /store/95005.html /store/shotgun-stock-pistol-grip-kit-20-gauge-95005.html
+Redirect 301 /store/95010.html /store/shotgun-stock-pistol-grip-kit-410-bore-95010.html
+Redirect 301 /store/95025.html /store/shotgun-stock-compact-lop-410-bore-95025.html
+Redirect 301 /store/95030.html /store/shotgun-stock-synthetic-12-gauge-95030.html
+Redirect 301 /store/95031.html /store/shotgun-forearm-tri-rail-synthetic-12-gauge-fits-7-3-4-action-slide-95031.html
+Redirect 301 /store/95033.html /store/mossberg-patriot-bolt-action-centerfire-magazine-standard-long-action-95033.html
+Redirect 301 /store/95034.html /store/mossberg-patriot-bolt-action-centerfire-magazine-magnum-long-action-95034.html
+Redirect 301 /store/95035.html /store/shotgun-stock-synthetic-4-storage-12-gauge-95035.html
+Redirect 301 /store/95036.html /store/mossberg-patriot-bolt-action-ruger-375-95036.html
+Redirect 301 /store/95051.html /store/shotgun-forearm-synthetic-12-gauge-fits-7-3-4-action-slide-95051.html
+Redirect 301 /store/95059.html /store/shotgun-stock-wood-w-dual-comb-12-gauge-95059.html
+Redirect 301 /store/95065.html /store/500-590-barrel-heat-shield-blued-95065.html
+Redirect 301 /store/95066.html /store/500-590-barrel-heat-shield-parkerized-95066.html
+Redirect 301 /store/95068.html /store/500-590-barrel-heat-shield-marinecote-95068.html
+Redirect 301 /store/95092.html /store/mossberg-accessories-loc-box-95092.html
+Redirect 301 /store/95131.html /store/mossberg-blaze-rimfire-rifle-rail-kit-95131.html
+Redirect 301 /store/95135.html /store/blaze-blaze-47-magazine-10-round-95135.html
+Redirect 301 /store/95136.html /store/blaze-blaze-47-magazine-25-round-95136.html
+Redirect 301 /store/95137.html /store/590m-mag-fed-detachable-magazine-5-rnd-95137.html
+Redirect 301 /store/95138.html /store/590m-mag-fed-detachable-magazine-10-rnd-95138.html
+Redirect 301 /store/95139.html /store/590m-mag-fed-detachable-magazine-15-rnd-95139.html
+Redirect 301 /store/95140.html /store/590m-mag-fed-detachable-magazine-20-rnd-95140.html
+Redirect 301 /store/95190.html /store/12-gauge-accu-choke-tube-full-95190.html
+Redirect 301 /store/95195.html /store/12-gauge-accu-choke-tube-modified-95195.html
+Redirect 301 /store/95200.html /store/12-gauge-accu-choke-tube-improved-cylinder-95200.html
+Redirect 301 /store/95205.html /store/choke-tube-wrench-95205.html
+Redirect 301 /store/95207.html /store/picatinny-rail-scope-mount-blued-95207.html
+Redirect 301 /store/95210.html /store/flex-recoil-pad-95210.html
+Redirect 301 /store/95211.html /store/flex-recoil-pad-95211.html
+Redirect 301 /store/95212.html /store/flex-recoil-pad-95212.html
+Redirect 301 /store/95213.html /store/flex-forearm-railed-95213.html
+Redirect 301 /store/95214.html /store/flex-forearm-standard-95214.html
+Redirect 301 /store/95215.html /store/20-gauge-accu-choke-tube-full-95215.html
+Redirect 301 /store/95216.html /store/flex-forearm-standard-break-up-infinity-95216.html
+Redirect 301 /store/95217.html /store/flex-forearm-standard-max-4-95217.html
+Redirect 301 /store/95218.html /store/flex-pistol-grip-95218.html
+Redirect 301 /store/95219.html /store/flex-6-position-tactical-stock-95219.html
+Redirect 301 /store/95220.html /store/20-gauge-accu-choke-tube-modified-95220.html
+Redirect 301 /store/95221.html /store/flex-4-position-hunting-stock-95221.html
+Redirect 301 /store/95222.html /store/flex-4-position-hunting-stock-break-up-infinity-95222.html
+Redirect 301 /store/95223.html /store/flex-standard-stock-12-5-lop-95223.html
+Redirect 301 /store/95224.html /store/flex-standard-stock-14-25-lop-95224.html
+Redirect 301 /store/95225.html /store/20-gauge-accu-choke-tube-improved-cylinder-95225.html
+Redirect 301 /store/95226.html /store/flex-standard-stock-13-5-lop-95226.html
+Redirect 301 /store/95227.html /store/flex-standard-stock-13-5-lop-break-up-infinity-95227.html
+Redirect 301 /store/95228.html /store/flex-standard-stock-13-5-lop-max-4-95228.html
+Redirect 301 /store/95230.html /store/20-gauge-accu-choke-tube-x-full-95230.html
+Redirect 301 /store/95231.html /store/20-gauge-x-factor-ported-choke-tube-x-full-95231.html
+Redirect 301 /store/95235.html /store/12-gauge-accu-choke-tube-skeet-95235.html
+Redirect 301 /store/95252.html /store/12-gauge-accu-mag-choke-tube-magnum-improved-cylinder-95252.html
+Redirect 301 /store/95253.html /store/12-gauge-accu-mag-choke-tube-magnum-modified-95253.html
+Redirect 301 /store/95254.html /store/12-gauge-accu-mag-choke-tube-magnum-full-95254.html
+Redirect 301 /store/95255.html /store/12-gauge-accu-mag-choke-tube-magnum-x-full-95255.html
+Redirect 301 /store/95256.html /store/12-gauge-accu-mag-choke-tube-magnum-skeet-95256.html
+Redirect 301 /store/95257.html /store/12-gauge-accu-mag-choke-tube-magnum-ulti-full-95257.html
+Redirect 301 /store/95258.html /store/12-gauge-x-factor-ported-choke-tube-magnum-ulti-full-95258.html
+Redirect 301 /store/95259.html /store/briley-m930-choke-pack-set-of-6-95259.html
+Redirect 301 /store/95267.html /store/12-gauge-accu-choke-tube-xx-full-95267.html
+Redirect 301 /store/95268.html /store/12-gauge-x-factor-ported-choke-tube-xx-full-95268.html
+Redirect 301 /store/95270.html /store/12-gauge-x-factor-ported-choke-tube-magnum-full-95270.html
+Redirect 301 /store/95280.html /store/12-gauge-x-factor-ported-choke-tube-magnum-modified-95280.html
+Redirect 301 /store/95290.html /store/12-gauge-x-factor-choke-tube-magnum-improved-cylinder-95290.html
+Redirect 301 /store/95300.html /store/ghost-ring-sight-kit-500-590-95300.html
+Redirect 301 /store/95346.html /store/mossberg-patriot-bolt-action-centerfire-magazine-magnum-short-action-95346.html
+Redirect 301 /store/95347.html /store/mossberg-patriot-bolt-action-centerfire-magazine-standard-short-action-95347.html
+Redirect 301 /store/95355.html /store/535-ats-12-gauge-slug-barrel-rifle-sights-cantilever-mount-24-blued-95355.html
+Redirect 301 /store/95507.html /store/mossberg-cablelock-95507.html
+Redirect 301 /store/95530.html /store/mossberg-cablelock-5-pack-95530.html
+Redirect 301 /store/95695.html /store/mossberg-695-bolt-action-magazine-95695.html
+Redirect 301 /store/95702.html /store/mossberg-international-702-plinkster-magazine-10-round-95702.html
+Redirect 301 /store/95712.html /store/mossberg-international-715-25-round-magazine-95712.html
+Redirect 301 /store/95713.html /store/mossberg-international-715-10-round-magazine-95713.html
+Redirect 301 /store/95725.html /store/mossberg-international-702-plinkster-magazine-25-round-95725.html
+Redirect 301 /store/95803.html /store/10-round-magazine-22lr-95803.html
+Redirect 301 /store/95887.html /store/5-round-magazine-17hmr-95887.html
+Redirect 301 /store/96010.html /store/jm-pro-adjustable-match-trigger-96010.html
+Redirect 301 /store/96022.html /store/flex-conversion-kit-stock-adapter-12-gauge-adapter-only-96022.html
+Redirect 301 /store/96023.html /store/flex-conversion-kit-stock-adapter-20-gauge-adapter-only-96023.html
+Redirect 301 /store/96024.html /store/flex-conversion-kit-stock-forearm-adapters-12-gauge-adapters-only-96024.html
+Redirect 301 /store/96025.html /store/flex-conversion-kit-stock-forearm-adapters-20-gauge-adapters-only-96025.html
+Redirect 301 /store/96026.html /store/flex-conversion-kit-stock-adapter-with-pistol-grip-12-gauge-96026.html
+Redirect 301 /store/96027.html /store/flex-conversion-kit-stock-adapter-with-pistol-grip-20-gauge-96027.html
+Redirect 301 /store/96200.html /store/picatinny-rail-scope-mount-matte-96200.html
+Redirect 301 /store/96201.html /store/picatinny-rail-scope-mount-marinecote-96201.html
+Redirect 301 /store/96202.html /store/picatinny-rail-scope-mount-mossy-oak-new-breakup-96202.html
+Redirect 301 /store/96203.html /store/picatinny-rail-scope-mount-mossy-oak-obsession-96203.html
+Redirect 301 /store/96204.html /store/picatinny-rail-scope-mount-realtree-hd-green-96204.html
+Redirect 301 /store/96205.html /store/mvp-5-56-scope-base-96205.html
+Redirect 301 /store/96206.html /store/mvp-7-62-patriot-short-action-scope-base-96206.html
+Redirect 301 /store/96207.html /store/patriot-long-action-scope-base-96207.html
+Redirect 301 /store/97025.html /store/gun-swabs-97025.html
+Redirect 301 /store/97058.html /store/mossberg-zombie-beware-97058.html
+Redirect 301 /store/97059.html /store/mossberg-zombie-beware-97059.html
+Redirect 301 /store/97060.html /store/mossberg-zombie-beware-97060.html
+Redirect 301 /store/97061.html /store/mossberg-zombie-beware-97061.html
+Redirect 301 /store/97062.html /store/mossberg-zombie-beware-97062.html
+Redirect 301 /store/97063.html /store/mossberg-zombie-beware-97063.html
+Redirect 301 /store/97069.html /store/muddy-girl-1-4-zip-fleece-black-with-muddy-girl-accents-97069.html
+Redirect 301 /store/97070.html /store/muddy-girl-1-4-zip-fleece-black-with-muddy-girl-accents-97070.html
+Redirect 301 /store/97071.html /store/muddy-girl-1-4-zip-fleece-black-with-muddy-girl-accents-97071.html
+Redirect 301 /store/97072.html /store/muddy-girl-1-4-zip-fleece-black-with-muddy-girl-accents-97072.html
+Redirect 301 /store/97073.html /store/muddy-girl-1-4-zip-fleece-black-with-muddy-girl-accents-97073.html
+Redirect 301 /store/97076.html /store/ladies-muddy-girl-polo-97076.html
+Redirect 301 /store/97077.html /store/ladies-muddy-girl-polo-97077.html
+Redirect 301 /store/97078.html /store/ladies-muddy-girl-polo-97078.html
+Redirect 301 /store/97079.html /store/ladies-muddy-girl-polo-97079.html
+Redirect 301 /store/97080.html /store/ladies-muddy-girl-polo-97080.html
+Redirect 301 /store/97081.html /store/ladies-muddy-girl-polo-97081.html
+Redirect 301 /store/97082.html /store/ladies-muddy-girl-polo-97082.html
+Redirect 301 /store/97083.html /store/ladies-muddy-girl-polo-97083.html
+Redirect 301 /store/97084.html /store/ladies-muddy-girl-polo-97084.html
+Redirect 301 /store/97085.html /store/ladies-muddy-girl-polo-97085.html
+Redirect 301 /store/97092.html /store/mossberg-black-and-grey-performance-t-shirt-97092.html
+Redirect 301 /store/97093.html /store/mossberg-black-and-grey-performance-t-shirt-97093.html
+Redirect 301 /store/97094.html /store/mossberg-black-and-grey-performance-t-shirt-97094.html
+Redirect 301 /store/97095.html /store/mossberg-black-and-grey-performance-t-shirt-97095.html
+Redirect 301 /store/97096.html /store/mossberg-black-and-grey-performance-t-shirt-97096.html
+Redirect 301 /store/97097.html /store/mossberg-black-and-grey-performance-t-shirt-97097.html
+Redirect 301 /store/97101.html /store/ladies-black-long-sleeve-t-97101.html
+Redirect 301 /store/97102.html /store/ladies-black-long-sleeve-t-97102.html
+Redirect 301 /store/97103.html /store/ladies-black-long-sleeve-t-97103.html
+Redirect 301 /store/97105.html /store/patriot-long-sleeve-t-shirt-97105.html
+Redirect 301 /store/97106.html /store/patriot-long-sleeve-t-shirt-97106.html
+Redirect 301 /store/97107.html /store/patriot-long-sleeve-t-shirt-97107.html
+Redirect 301 /store/97108.html /store/patriot-long-sleeve-t-shirt-97108.html
+Redirect 301 /store/97109.html /store/patriot-long-sleeve-t-shirt-97109.html
+Redirect 301 /store/97110.html /store/patriot-long-sleeve-t-shirt-97110.html
+Redirect 301 /store/97111.html /store/patriot-short-sleeve-t-shirt-97111.html
+Redirect 301 /store/97112.html /store/patriot-short-sleeve-t-shirt-97112.html
+Redirect 301 /store/97113.html /store/patriot-short-sleeve-t-shirt-97113.html
+Redirect 301 /store/97114.html /store/patriot-short-sleeve-t-shirt-97114.html
+Redirect 301 /store/97115.html /store/patriot-short-sleeve-t-shirt-97115.html
+Redirect 301 /store/97116.html /store/patriot-short-sleeve-t-shirt-97116.html
+Redirect 301 /store/97117.html /store/blaze-47-short-sleeve-t-shirt-97117.html
+Redirect 301 /store/97118.html /store/blaze-47-short-sleeve-t-shirt-97118.html
+Redirect 301 /store/97119.html /store/blaze-47-short-sleeve-t-shirt-97119.html
+Redirect 301 /store/97120.html /store/blaze-47-short-sleeve-t-shirt-97120.html
+Redirect 301 /store/97121.html /store/blaze-47-short-sleeve-t-shirt-97121.html
+Redirect 301 /store/97122.html /store/blaze-47-short-sleeve-t-shirt-97122.html
+Redirect 301 /store/97123.html /store/blaze-47-long-sleeve-t-shirt-97123.html
+Redirect 301 /store/97124.html /store/blaze-47-long-sleeve-t-shirt-97124.html
+Redirect 301 /store/97125.html /store/blaze-47-long-sleeve-t-shirt-97125.html
+Redirect 301 /store/97126.html /store/blaze-47-long-sleeve-t-shirt-97126.html
+Redirect 301 /store/97127.html /store/blaze-47-long-sleeve-t-shirt-97127.html
+Redirect 301 /store/97128.html /store/blaze-47-long-sleeve-t-shirt-97128.html
+Redirect 301 /store/97129.html /store/kryptek-typhon-mossberg-cap-97129.html
+Redirect 301 /store/97130.html /store/kryptek-highlander-mossberg-cap-97130.html
+Redirect 301 /store/97131.html /store/mossberg-built-rugged-proudly-american-shield-t-shirt-97131.html
+Redirect 301 /store/97132.html /store/mossberg-built-rugged-proudly-american-shield-t-shirt-97132.html
+Redirect 301 /store/97133.html /store/mossberg-built-rugged-proudly-american-shield-t-shirt-97133.html
+Redirect 301 /store/97134.html /store/mossberg-built-rugged-proudly-american-shield-t-shirt-97134.html
+Redirect 301 /store/97135.html /store/mossberg-built-rugged-proudly-american-shield-t-shirt-97135.html
+Redirect 301 /store/97136.html /store/mossberg-built-rugged-proudly-american-shield-t-shirt-97136.html
+Redirect 301 /store/97137.html /store/mossberg-built-rugged-proudly-american-shield-t-shirt-97137.html
+Redirect 301 /store/97138.html /store/mossberg-built-rugged-proudly-american-shield-t-shirt-97138.html
+Redirect 301 /store/97139.html /store/mossberg-built-rugged-proudly-american-shield-t-shirt-97139.html
+Redirect 301 /store/97140.html /store/mossberg-built-rugged-proudly-american-shield-t-shirt-97140.html
+Redirect 301 /store/97141.html /store/mossberg-built-rugged-proudly-american-shield-t-shirt-97141.html
+Redirect 301 /store/97142.html /store/mossberg-built-rugged-proudly-american-shield-t-shirt-97142.html
+Redirect 301 /store/97143.html /store/mvp-lc-short-sleeve-t-shirt-97143.html
+Redirect 301 /store/97144.html /store/mvp-lc-short-sleeve-t-shirt-97144.html
+Redirect 301 /store/97145.html /store/mvp-lc-short-sleeve-t-shirt-97145.html
+Redirect 301 /store/97146.html /store/mvp-lc-short-sleeve-t-shirt-97146.html
+Redirect 301 /store/97147.html /store/mvp-lc-short-sleeve-t-shirt-97147.html
+Redirect 301 /store/97148.html /store/mvp-lc-short-sleeve-t-shirt-97148.html
+Redirect 301 /store/97149.html /store/mvp-lc-long-sleeve-t-shirt-97149.html
+Redirect 301 /store/97150.html /store/mvp-lc-long-sleeve-t-shirt-97150.html
+Redirect 301 /store/97151.html /store/mvp-lc-long-sleeve-t-shirt-97151.html
+Redirect 301 /store/97152.html /store/mvp-lc-long-sleeve-t-shirt-97152.html
+Redirect 301 /store/97153.html /store/mvp-lc-long-sleeve-t-shirt-97153.html
+Redirect 301 /store/97154.html /store/mvp-lc-long-sleeve-t-shirt-97154.html
+Redirect 301 /store/97155.html /store/590-tactical-short-sleeve-t-shirt-97155.html
+Redirect 301 /store/97156.html /store/590-tactical-short-sleeve-t-shirt-97156.html
+Redirect 301 /store/97157.html /store/590-tactical-short-sleeve-t-shirt-97157.html
+Redirect 301 /store/97158.html /store/590-tactical-short-sleeve-t-shirt-97158.html
+Redirect 301 /store/97159.html /store/590-tactical-short-sleeve-t-shirt-97159.html
+Redirect 301 /store/97160.html /store/590-tactical-short-sleeve-t-shirt-97160.html
+Redirect 301 /store/97161.html /store/590-tactical-long-sleeve-t-shirt-97161.html
+Redirect 301 /store/97162.html /store/590-tactical-long-sleeve-t-shirt-97162.html
+Redirect 301 /store/97163.html /store/590-tactical-long-sleeve-t-shirt-97163.html
+Redirect 301 /store/97164.html /store/590-tactical-long-sleeve-t-shirt-97164.html
+Redirect 301 /store/97165.html /store/590-tactical-long-sleeve-t-shirt-97165.html
+Redirect 301 /store/97166.html /store/590-tactical-long-sleeve-t-shirt-97166.html
+Redirect 301 /store/97167.html /store/ladies-built-rugged-proudly-american-us-flag-shirt-97167.html
+Redirect 301 /store/97168.html /store/ladies-built-rugged-proudly-american-us-flag-shirt-97168.html
+Redirect 301 /store/97169.html /store/ladies-built-rugged-proudly-american-us-flag-shirt-97169.html
+Redirect 301 /store/97170.html /store/ladies-built-rugged-proudly-american-us-flag-shirt-97170.html
+Redirect 301 /store/97171.html /store/ladies-built-rugged-proudly-american-us-flag-shirt-97171.html
+Redirect 301 /store/97172.html /store/built-rugged-proudly-american-us-flag-shirt-97172.html
+Redirect 301 /store/97173.html /store/built-rugged-proudly-american-us-flag-shirt-97173.html
+Redirect 301 /store/97174.html /store/built-rugged-proudly-american-us-flag-shirt-97174.html
+Redirect 301 /store/97175.html /store/built-rugged-proudly-american-us-flag-shirt-97175.html
+Redirect 301 /store/97176.html /store/built-rugged-proudly-american-us-flag-shirt-97176.html
+Redirect 301 /store/97177.html /store/built-rugged-proudly-american-us-flag-shirt-97177.html
+Redirect 301 /store/97202.html /store/faded-blue-mesh-back-mossberg-cap-97202.html
+Redirect 301 /store/97203.html /store/faded-khaki-mesh-back-mossberg-cap-97203.html
+Redirect 301 /store/97204.html /store/ladies-camo-bling-cap-97204.html
+Redirect 301 /store/97205.html /store/muddy-girl-mossberg-cap-97205.html
+Redirect 301 /store/97206.html /store/coolmax-mossberg-cap-97206.html
+Redirect 301 /store/97207.html /store/coolmax-mossberg-cap-97207.html
+Redirect 301 /store/97212.html /store/mossberg-9-fixed-blade-hunting-knife-97212.html
+Redirect 301 /store/97213.html /store/mossberg-fixed-blade-gut-hook-knife-97213.html
+Redirect 301 /store/97214.html /store/mossberg-fixed-blade-hunting-knife-97214.html
+Redirect 301 /store/97215.html /store/mossberg-silicon-gun-cloth-97215.html
+Redirect 301 /store/97217.html /store/mossberg-mossy-oak-obsession-cap-97217.html
+Redirect 301 /store/97218.html /store/mossberg-mossy-oak-break-up-country-cap-97218.html
+Redirect 301 /store/97525.html /store/mossberg-history-more-gun-for-the-money-97525.html
+Redirect 301 /store/99004.html /store/license-plate-frame-cuz-hunting-aint-catch-release-99004.html
+Redirect 301 /store/99008.html /store/stainless-steel-travel-mug-99008.html
+Redirect 301 /store/99039.html /store/mossberg-hitch-cover-99039.html
+Redirect 301 /store/99070.html /store/mossberg-barrel-sticker-99070.html
+Redirect 301 /store/99191.html /store/silver-mossberg-decal-99191.html
+Redirect 301 /store/99192.html /store/bronze-mossberg-decal-99192.html
+Redirect 301 /store/99225.html /store/ultimate-backpack-99225.html
+Redirect 301 /store/99226.html /store/mossberg-silver-logo-koozie-99226.html
+Redirect 301 /store/99231.html /store/lapel-pin-99231.html
+Redirect 301 /store/99234.html /store/mossberg-key-chain-99234.html
+Redirect 301 /store/99247.html /store/shotgun-case-99247.html
+Redirect 301 /store/99248.html /store/youth-compact-case-99248.html
+Redirect 301 /store/99249.html /store/tactical-shotgun-case-long-44-99249.html
+Redirect 301 /store/99254.html /store/classic-blue-mossberg-cap-99254.html
+Redirect 301 /store/99255.html /store/tactical-shotgun-case-short-36-75-99255.html
+Redirect 301 /store/99256.html /store/scoped-rifle-case-99256.html
+Redirect 301 /store/99257.html /store/washed-camo-cap-99257.html
+Redirect 301 /store/99264.html /store/distressed-logo-adult-t-shirt-99264.html
+Redirect 301 /store/99275.html /store/black-mossberg-koozie-99275.html
+Redirect 301 /store/99276.html /store/blue-mossberg-koozie-99276.html
+Redirect 301 /store/99277.html /store/water-bottle-blue-camelbak-chute-99277.html
+Redirect 301 /store/99290.html /store/mossberg-distressed-logo-hoodie-99290.html
+Redirect 301 /store/99338.html /store/camo-logo-performance-t-99338.html
+Redirect 301 /store/99341.html /store/ladies-black-long-sleeve-t-99341.html
+Redirect 301 /store/99342.html /store/black-full-zip-jacket-99342.html
+Redirect 301 /store/99343.html /store/black-full-zip-jacket-99343.html
+Redirect 301 /store/99344.html /store/black-full-zip-jacket-99344.html
+Redirect 301 /store/99345.html /store/black-full-zip-jacket-99345.html
+Redirect 301 /store/99346.html /store/black-full-zip-jacket-99346.html
+Redirect 301 /store/99347.html /store/black-full-zip-jacket-99347.html
+Redirect 301 /store/99348.html /store/mossberg-distressed-logo-hoodie-99348.html
+Redirect 301 /store/99349.html /store/mossberg-distressed-logo-hoodie-99349.html
+Redirect 301 /store/99350.html /store/mossberg-distressed-logo-hoodie-99350.html
+Redirect 301 /store/99351.html /store/mossberg-distressed-logo-hoodie-99351.html
+Redirect 301 /store/99355.html /store/distressed-logo-adult-t-shirt-99355.html
+Redirect 301 /store/99356.html /store/distressed-logo-adult-t-shirt-99356.html
+Redirect 301 /store/99357.html /store/distressed-logo-adult-t-shirt-99357.html
+Redirect 301 /store/99358.html /store/distressed-logo-adult-t-shirt-99358.html
+Redirect 301 /store/99359.html /store/distressed-logo-adult-t-shirt-99359.html
+Redirect 301 /store/99378.html /store/mossberg-floor-mat-99378.html
+Redirect 301 /store/99379.html /store/mossberg-neon-sign-99379.html
+Redirect 301 /store/99380.html /store/mossberg-led-sign-99380.html
+Redirect 301 /store/99381.html /store/mossberg-bar-stool-99381.html
+Redirect 301 /store/99395.html /store/mossberg-digicam-cap-99395.html
+Redirect 301 /store/99396.html /store/mossberg-logo-silver-decal-99396.html
+Redirect 301 /store/99436.html /store/realtree-extra-green-camo-hat-99436.html
+Redirect 301 /store/99437.html /store/mossberg-mossy-oak-break-up-infinity-cap-99437.html
+Redirect 301 /store/99438.html /store/mossberg-mossy-oak-blades-cap-99438.html
+Redirect 301 /store/99461.html /store/camo-logo-performance-t-99461.html
+Redirect 301 /store/99462.html /store/camo-logo-performance-t-99462.html
+Redirect 301 /store/99463.html /store/camo-logo-performance-t-99463.html
+Redirect 301 /store/99464.html /store/camo-logo-performance-t-99464.html
+Redirect 301 /store/99465.html /store/camo-logo-performance-t-99465.html
+Redirect 301 /store/99466.html /store/long-sleeve-performance-t-99466.html
+Redirect 301 /store/99467.html /store/long-sleeve-performance-t-99467.html
+Redirect 301 /store/99468.html /store/long-sleeve-performance-t-99468.html
+Redirect 301 /store/99469.html /store/long-sleeve-performance-t-99469.html
+Redirect 301 /store/99470.html /store/long-sleeve-performance-t-99470.html
+Redirect 301 /store/99471.html /store/long-sleeve-performance-t-99471.html
+Redirect 301 /store/99472.html /store/sketchy-mossberg-adult-t-shirt-99472.html
+Redirect 301 /store/99473.html /store/sketchy-mossberg-adult-t-shirt-99473.html
+Redirect 301 /store/99474.html /store/sketchy-mossberg-adult-t-shirt-99474.html
+Redirect 301 /store/99475.html /store/sketchy-mossberg-adult-t-shirt-99475.html
+Redirect 301 /store/99476.html /store/sketchy-mossberg-adult-t-shirt-99476.html
+Redirect 301 /store/99477.html /store/sketchy-mossberg-adult-t-shirt-99477.html
+Redirect 301 /store/99478.html /store/mossberg-arm-yourself-vinyl-banner-small-99478.html
+Redirect 301 /store/99479.html /store/mossberg-arm-yourself-vinyl-banner-large-99479.html
+Redirect 301 /store/99480.html /store/mossberg-built-rugged-vinyl-banner-small-99480.html
+Redirect 301 /store/99481.html /store/mossberg-built-rugged-vinyl-banner-large-99481.html
+Redirect 301 /store/99521.html /store/dog-tag-built-rugged-proudly-american-99521.html
+Redirect 301 /store/99524.html /store/black-and-pink-washed-mossberg-cap-99524.html
+Redirect 301 /store/99525.html /store/pink-mossberg-cap-99525.html
+Redirect 301 /store/99921.html /store/mossy-oak-bottomland-hoodie-99921.html
+Redirect 301 /store/99922.html /store/mossy-oak-bottomland-hoodie-99922.html
+Redirect 301 /store/99923.html /store/mossy-oak-bottomland-hoodie-99923.html
+Redirect 301 /store/99924.html /store/mossy-oak-bottomland-hoodie-99924.html
+Redirect 301 /store/99925.html /store/mossy-oak-bottomland-hoodie-99925.html
+Redirect 301 /store/99926.html /store/mossy-oak-obsession-hoodie-99926.html
+Redirect 301 /store/99927.html /store/mossy-oak-obsession-hoodie-99927.html
+Redirect 301 /store/99928.html /store/mossy-oak-obsession-hoodie-99928.html
+Redirect 301 /store/99929.html /store/mossy-oak-obsession-hoodie-99929.html
+Redirect 301 /store/99930.html /store/mossy-oak-obsession-hoodie-99930.html
+Redirect 301 /store/99931.html /store/mossy-oak-break-up-infinity-hoodie-99931.html
+Redirect 301 /store/99932.html /store/mossy-oak-break-up-infinity-hoodie-99932.html
+Redirect 301 /store/99933.html /store/mossy-oak-break-up-infinity-hoodie-99933.html
+Redirect 301 /store/99934.html /store/mossy-oak-break-up-infinity-hoodie-99934.html
+Redirect 301 /store/99935.html /store/mossy-oak-break-up-infinity-hoodie-99935.html
+Redirect 301 /store/99942.html /store/gambler-t-shirt-99942.html
+Redirect 301 /store/99943.html /store/gambler-t-shirt-99943.html
+Redirect 301 /store/99944.html /store/gambler-t-shirt-99944.html
+Redirect 301 /store/99945.html /store/gambler-t-shirt-99945.html
+Redirect 301 /store/99946.html /store/mossberg-built-rugged-blue-t-shirt-99946.html
+Redirect 301 /store/99947.html /store/mossberg-built-rugged-blue-t-shirt-99947.html
+Redirect 301 /store/99948.html /store/mossberg-built-rugged-blue-t-shirt-99948.html
+Redirect 301 /store/99949.html /store/mossberg-built-rugged-blue-t-shirt-99949.html
+Redirect 301 /store/99955.html /store/mossberg-built-rugged-proudly-american-patch-black-99955.html
+Redirect 301 /store/99956.html /store/mossberg-built-rugged-proudly-american-patch-green-99956.html
+Redirect 301 /store/99957.html /store/mossberg-built-rugged-proudly-american-patch-brown-99957.html
+Redirect 301 /store/99959.html /store/mossberg-built-rugged-proudly-american-patch-black-99959.html
+Redirect 301 /store/C10037.html /store/same-as-axe16m4750-c10037.html
+Redirect 301 /store/C10038.html /store/same-as-spi16m4-for-e-store-c10038.html
+Redirect 301 /store/CFG-10.html /store/590-tactical-long-sleeve-t-shirt-cfg-10.html
+Redirect 301 /store/CFG-11.html /store/590-tactical-short-sleeve-t-shirt-cfg-11.html
+Redirect 301 /store/CFG-12.html /store/black-full-zip-jacket-cfg-12.html
+Redirect 301 /store/CFG-13.html /store/blaze-47-long-sleeve-t-shirt-cfg-13.html
+Redirect 301 /store/CFG-14.html /store/blaze-47-short-sleeve-t-shirt-cfg-14.html
+Redirect 301 /store/CFG-15.html /store/built-rugged-proudly-american-us-flag-shirt-cfg-15.html
+Redirect 301 /store/CFG-16.html /store/camo-logo-performance-t-cfg-16.html
+Redirect 301 /store/CFG-17.html /store/coolmax-mossberg-cap-cfg-17.html
+Redirect 301 /store/CFG-18.html /store/distressed-logo-adult-t-shirt-cfg-18.html
+Redirect 301 /store/CFG-23.html /store/gambler-t-shirt-cfg-23.html
+Redirect 301 /store/CFG-24.html /store/ladies-black-long-sleeve-t-cfg-24.html
+Redirect 301 /store/CFG-25.html /store/ladies-built-rugged-proudly-american-us-flag-shirt-cfg-25.html
+Redirect 301 /store/CFG-26.html /store/ladies-muddy-girl-polo-cfg-26.html
+Redirect 301 /store/CFG-27.html /store/long-sleeve-performance-t-cfg-27.html
+Redirect 301 /store/CFG-28.html /store/mossberg-black-and-grey-performance-t-shirt-cfg-28.html
+Redirect 301 /store/CFG-29.html /store/mossberg-built-rugged-proudly-american-shield-t-shirt-cfg-29.html
+Redirect 301 /store/CFG-30.html /store/mossberg-zombie-beware-cfg-30.html
+Redirect 301 /store/CFG-31.html /store/mossberg-built-rugged-blue-t-shirt-cfg-31.html
+Redirect 301 /store/CFG-32.html /store/mossberg-distressed-logo-hoodie-cfg-32.html
+Redirect 301 /store/CFG-36.html /store/mossy-oak-bottomland-hoodie-cfg-36.html
+Redirect 301 /store/CFG-37.html /store/mossy-oak-break-up-infinity-hoodie-cfg-37.html
+Redirect 301 /store/CFG-38.html /store/mossy-oak-obsession-hoodie-cfg-38.html
+Redirect 301 /store/CFG-39.html /store/muddy-girl-1-4-zip-fleece-black-with-muddy-girl-accents-cfg-39.html
+Redirect 301 /store/CFG-41.html /store/mvp-lc-long-sleeve-t-shirt-cfg-41.html
+Redirect 301 /store/CFG-42.html /store/mvp-lc-short-sleeve-t-shirt-cfg-42.html
+Redirect 301 /store/CFG-43.html /store/patriot-long-sleeve-t-shirt-cfg-43.html
+Redirect 301 /store/CFG-44.html /store/patriot-short-sleeve-t-shirt-cfg-44.html
+Redirect 301 /store/CFG-50.html /store/sketchy-mossberg-adult-t-shirt-cfg-50.html
+Redirect 301 /store/CFG-51.html /store/tactical-shotgun-case-cfg-51.html
+
+# Resources
+Redirect 301 /gaos2016 http://resources.mossberg.com/join-the-mossberg-community 
+Redirect 301 /nwtf16 http://resources.mossberg.com/nwtf2016 
+Redirect 301 /ihea http://resources.mossberg.com/mossbergs-ihea-instructor-offer 
+Redirect 301 /whitetail-challenge http://resources.mossberg.com/whitetail-challenge-game-download 
+Redirect 301 /join-the-mossberg-community http://resources.mossberg.com/join
+
+# Promo
+Redirect 301 /grand-20 /join-the-mossberg-community/
+Redirect 301 /holiday16 /holiday-buying-guide-2016/
+Redirect 301 /flexfixins http://woobox.com/wwo2w8
+Redirect 301 /blackfriday2017 /store/promos/deals.html
+Redirect 301 /store/promos/blackfriday.html /store/promos/deals.html
+Redirect 301 /win590m http://woobox.com/3na2to
+Redirect 301 /WIN590M http://woobox.com/3na2to
+Redirect 301 /WIN590m http://woobox.com/3na2to
+Redirect 301 /Win590m http://woobox.com/3na2to
+Redirect 301 /rules590m http://woobox.com/offers/rules/3na2to
+Redirect 301 /RULES590M http://woobox.com/offers/rules/3na2to
+Redirect 301 /RULES590m http://woobox.com/offers/rules/3na2to
+Redirect 301 /Rules590m http://woobox.com/offers/rules/3na2to
+Redirect 301 /beat-the-heat-sweeps http://woobox.com/fvihtk
+Redirect 301 /590Moffer http://offers.mossberg.com/590moffer
+Redirect 301 /590moffer http://offers.mossberg.com/590moffer
+Redirect 301 /590MOFFER http://offers.mossberg.com/590moffer
+Redirect 301 /590MOffer http://offers.mossberg.com/590moffer
+Redirect 301 /mc1sweeps https://woobox.com/63e6xq
+Redirect 301 /MC1SWEEPS https://woobox.com/63e6xq
+Redirect 301 /Mc1sweeps https://woobox.com/63e6xq
+Redirect 301 /Mc1Sweeps https://woobox.com/63e6xq
+Redirect 301 /centennialsweeps https://woobox.com/63e6xq
+Redirect 301 /CENTENNIALSWEEPS https://woobox.com/63e6xq
+Redirect 301 /Centennialsweeps https://woobox.com/63e6xq
+Redirect 301 /CentennialSweeps https://woobox.com/63e6xq
+
+# Product
+RewriteRule ^product/(.*)/([0-9]+)/?$ /wp-content/themes/mossberg/redirect-product.php?id=$2 [NC,L]
+
+# Htpasswd 
+ErrorDocument 401 default
+
+# Link Corrections
+Redirect 301 /store/parts.htmlhttp:/www.mossberg.com/parts-and-accessories/ /parts-and-accessories/
+Redirect 301 /blackfriday2016/store/promos/blackfriday.html /blackfriday2016/
+Redirect 301 /store/promos/steals-and-deals.html /store/promos/deals.html
+Redirect 301 /category/series/ati-scorpion /category/series/ati-tactical
+Redirect 301 /arm-yourself /armyourself
+Redirect 301 /a_husbands_take_on_flex /2016-womens-innovation-product-of-the-year-american-rifleman/
+Redirect 301 /store/parts/type/flexaccessories.html /store/parts/type/flex-accessories.html
+Redirect 301 /service/request-catalog /catalog-request
+Redirect 301 /service/request-owners-manual /owners-manuals
+Redirect 301 /introducing-mossberg-flex-conversion-kits /mossberg-flex-conversion-kits/
+
+# Store
+redirectMatch 301 ^/store/?$ /parts-and-accessories
+
+# Customer Service
+Redirect 301 /customer-service /service/
+RewriteRule ^customer-service/(.*)/?$ /service/$2 [NC,L]
+
+# Maintenance
+#redirectMatch 302 ^/store/(.*)$ https://www.mossberg.com/maintenance
+
+# Media Kit
+redirectMatch 301 ^/mediakit/?$ https://mossberg.box.com/s/1bb6gpwhkzmvszti2agt1mt3eqp920w3
+
+
+# Bot Blacklist -----------------------------------------------------------------------------------------------------------------------------------------------------
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# This domain inherits the "PHP" package.
+# php -- END cPanel-generated handler, do not edit
+# Begin HackRepair.com Blacklist 2016
+# Click RAW button above, select all and copy (Ctrl-C) then paste (Ctrl-V) before all other rules in .htaccess file
+# Changelog: http://pastebin.com/edit/544Wqexn | Alternate web.config settings for IIS, PHP or WordPress: http://bit.ly/1UeiNo3
+# Wish to "deny" countries from accessing your site, see IP2Location: http://bit.ly/1Q3MrHd
+
+RewriteEngine on
+
+# Security related. Block browser access to log files
+<Files  ~ "\.log$">
+  Order allow,deny
+</Files>
+
+# Security related. May help against some types of drive-by-downloads
+# Read more: https://www.owasp.org/index.php/List_of_useful_HTTP_headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options nosniff
+</IfModule>
+
+# Security related. May help against some types of cross-site scripting attacks
+# Read more: https://www.owasp.org/index.php/List_of_useful_HTTP_headers
+<IfModule mod_headers.c>
+  Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Block Common Malicious Bot Queries
+<IfModule mod_rewrite.c>
+RewriteCond %{QUERY_STRING} http\:\/\/www\.google\.com\/humans\.txt\? [NC,OR]
+RewriteCond %{QUERY_STRING} (img|thumb|thumb_editor|thumbopen).php [NC,OR]
+RewriteCond %{QUERY_STRING} fckeditor [NC]
+RewriteCond %{QUERY_STRING} revslider [NC]
+RewriteRule .* - [F,L]
+</IfModule>
+
+# Abuse User Agents Blocking
+# Blocking user agents stops traffic from the named bots below
+<IfModule mod_rewrite.c>
+RewriteCond %{HTTP_USER_AGENT} ^.*(1Noonbot|1on1searchBot|3D_SEARCH|3DE_SEARCH2|3GSE|50.nu|192.comAgent|360Spider|A6-Indexer|AASP|ABACHOBot|Abonti|abot|AbotEmailSearch|Aboundex|AboutUsBot|AccMonitor\ Compliance|accoona|AChulkov.NET\ page\ walker|Acme.Spider|AcoonBot|acquia-crawler|ActiveTouristBot|Acunetix|Ad\ Muncher|AdamM|adbeat_bot|adminshop.com|Advanced\ Email|AESOP_com_SpiderMan|AESpider|AF\ Knowledge\ Now\ Verity|aggregator:Vocus|ah-ha.com|AIBOT|aiHitBot|aipbot|AISIID|AITCSRobot|Akamai-SiteSnapshot|AlexaWebSearchPlatform|AlexfDownload|Alexibot|AlkalineBOT|All\ Acronyms|Amfibibot|AmPmPPC.com|AMZNKAssocBot|Anemone|Anonymous|Anonymouse.org|AnotherBot|AnswerBot|AnswerBus|AnswerChase\ PROve|AntBot|antibot-|AntiSantyWorm|Antro.Net|AONDE-Spider|Aport|Aqua_Products|AraBot|Arachmo|Arachnophilia|archive.org_bot|aria\ eQualizer|arianna.libero.it|Arikus_Spider|Art-Online.com|ArtavisBot|Artera|ASpider|ASPSeek|asterias|AstroFind|athenusbot|AtlocalBot|Atomic_Email_Hunter|attach|attrakt|attributor|Attributor.comBot|augurfind|AURESYS|AutoBaron|autoemailspider|autowebdir|AVSearch-|axfeedsbot|Axonize-bot|Ayna|b2w|BackDoorBot|BackRub|BackStreet\ Browser|BackWeb|Baiduspider-video|Bandit|BatchFTP|baypup|BDFetch|BecomeBot|BecomeJPBot|BeetleBot|Bender|besserscheitern-crawl|betaBot|Big\ Brother|Big\ Data|Bigado.com|BigCliqueBot|Bigfoot|BIGLOTRON|Bilbo|BilgiBetaBot|BilgiBot|binlar|bintellibot|bitlybot|BitvoUserAgent|Bizbot003|BizBot04|BizBot04\ kirk.overleaf.com|Black.Hole|Black\ Hole|Blackbird|BlackWidow|bladder\ fusion|Blaiz-Bee|BLEXBot|Blinkx|BlitzBOT|Blog\ Conversation\ Project|BlogMyWay|BlogPulseLive|BlogRefsBot|BlogScope|Blogslive|BloobyBot|BlowFish|BLT|bnf.fr_bot|BoaConstrictor|BoardReader-Image-Fetcher|BOI_crawl_00|BOIA-Scan-Agent|BOIA.ORG-Scan-Agent|boitho.com-dc|Bookmark\ Buddy|bosug|Bot\ Apoena|BotALot|BotRightHere|Botswana|bottybot|BpBot|BRAINTIME_SEARCH|BrokenLinkCheck.com|BrowserEmulator|BrowserMob|BruinBot|BSearchR&D|BSpider|btbot|Btsearch|Buddy|Buibui|BuildCMS|BuiltBotTough|Bullseye|bumblebee|BunnySlippers|BuscadorClarin|Butterfly|BuyHawaiiBot|BuzzBot|byindia|BySpider|byteserver|bzBot|c\ r\ a\ w\ l\ 3\ r|CacheBlaster|CACTVS\ Chemistry|Caddbot|Cafi|Camcrawler|CamelStampede|Canon-WebRecord|Canon-WebRecordPro|CareerBot|casper|cataguru|CatchBot|CazoodleBot|CCBot|CCGCrawl|ccubee|CD-Preload|CE-Preload|Cegbfeieh|Cerberian\ Drtrs|CERT\ FigleafBot|cfetch|CFNetwork|Chameleon|ChangeDetection|Charlotte|Check&Get|Checkbot|Checklinks|checkprivacy|CheeseBot|ChemieDE-NodeBot|CherryPicker|CherryPickerElite|CherryPickerSE|Chilkat|ChinaClaw|CipinetBot|cis455crawler|citeseerxbot|cizilla.com|ClariaBot|clshttp|Clushbot|cmsworldmap|coccoc|CollapsarWEB|Collector|combine|conceptbot|ConnectSearch|conpilot|ContentSmartz|ContextAd|contype|cookieNET|CoolBot‚Ä†|CoolCheck|Copernic|Copier|CopyRightCheck|core-project|cosmos|Covario-IDS|Cowbot-|Cowdog|crabbyBot|crawl|Crawl_Application|crawl.UserAgent|CrawlConvera|crawler|crawler_for_infomine|CRAWLER-ALTSE.VUNET.ORG-Lynx|crawler-upgrade-config|crawler.kpricorn.org|crawler@|crawler4j|crawler43.ejupiter.com|Crawly|CreativeCommons|Crescent|Crescent\ Internet\ ToolPak\ HTTP\ OLE\ Control|cs-crawler|CSE\ HTML\ Validator|CSHttpClient|Cuasarbot|culsearch|Curl|Custo|Cutbot|cvaulev|Cyberdog|CyberNavi_WebGet|CyberSpyder|CydralSpider).*$ [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} ^.*(D1GArabicEngine|DA|DataCha0s|DataFountains|DataparkSearch|DataSpearSpiderBot|DataSpider|Dattatec.com|Dattatec.com-Sitios-Top|Daumoa|DAUMOA-video|DAUMOA-web|Declumbot|Deepindex|deepnet|DeepTrawl|dejan|del.icio.us-thumbnails|DelvuBot|Deweb|DiaGem|Diamond|DiamondBot|diavol|DiBot|didaxusbot|DigExt|Digger|DiGi-RSSBot|DigitalArchivesBot|DigOut4U|DIIbot|Dillo|Dir_Snatch.exe|DISCo|DISCo\ Pump|discobot|DISCoFinder|Distilled-Reputation-Monitor|Dit|DittoSpyder|DjangoTraineeBot|DKIMRepBot|DoCoMo|DOF-Verify|domaincrawler|DomainScan|DomainWatcher|dotbot|DotSpotsBot|Dow\ Jonesbot|Download|Download\ Demon|Downloader|DOY|dragonfly|Drip|drone|DTAAgent|dtSearchSpider|dumbot|Dwaar|Dwaarbot|DXSeeker|EAH|EasouSpider|EasyDL|ebingbong|EC2LinkFinder|eCairn-Grabber|eCatch|eChooseBot|ecxi|EdisterBot|EduGovSearch|egothor|eidetica.com|EirGrabber|ElisaBot|EllerdaleBot|EMail\ Exractor|EmailCollector|EmailLeach|EmailSiphon|EmailWolf|EMPAS_ROBOT|EnaBot|endeca|EnigmaBot|Enswer\ Neuro|EntityCubeBot|EroCrawler|eStyleSearch|eSyndiCat|Eurosoft-Bot|Evaal|Eventware|Everest-Vulcan|Exabot|Exabot-Images|Exabot-Test|Exabot-XXX|ExaBotTest|ExactSearch|exactseek.com|exooba|Exploder|explorersearch|extract|Extractor|ExtractorPro|EyeNetIE|ez-robot|Ezooms|factbot|FairAd\ Client|falcon|Falconsbot|fast-search-engine|FAST\ Data\ Document|FAST\ ESP|fastbot|fastbot.de|FatBot|Favcollector|Faviconizer|FDM|FedContractorBot|feedfinder|FelixIDE|fembot|fetch_ici|Fetch\ API\ Request|fgcrawler|FHscan|fido|Filangy|FileHound|FindAnISP.com_ISP_Finder|findlinks|FindWeb|Firebat|Fish-Search-Robot|Flaming\ AttackBot|Flamingo_SearchEngine|FlashCapture|FlashGet|flicky|FlickySearchBot|flunky|focused_crawler|FollowSite|Foobot|Fooooo_Web_Video_Crawl|Fopper|FormulaFinderBot|Forschungsportal|fr_crawler|Francis|Freecrawl|FreshDownload|freshlinks.exe|FriendFeedBot|frodo.at|froGgle|FrontPage|Froola|FU-NBI|full_breadth_crawler|FunnelBack|FunWebProducts|FurlBot|g00g1e|G10-Bot|Gaisbot|GalaxyBot|gazz|gcreep|generate_infomine_category_classifiers|genevabot|genieBot|GenieBotRD_SmallCrawl|Genieo|Geomaxenginebot|geometabot|GeonaBot|GeoVisu|GermCrawler|GetHTMLContents|Getleft|GetRight|GetSmart|GetURL.rexx|GetWeb!|Giant|GigablastOpenSource|Gigabot|Girafabot|GleameBot|gnome-vfs|Go-Ahead-Got-It|Go!Zilla|GoForIt.com|GOFORITBOT|gold|Golem|GoodJelly|Gordon-College-Google-Mini|goroam|GoSeebot|gotit|Govbot|GPU\ p2p|grab|Grabber|GrabNet|Grafula|grapeFX|grapeshot|GrapeshotCrawler|grbot|GreenYogi\ [ZSEBOT]|Gromit|GroupMe|grub|grub-client|Grubclient-|GrubNG|GruBot|GSLFbot|GT::WWW|Gulliver|GulperBot|GurujiBot|GVC|GVC\ BUSINESS|gvcbot.com|HappyFunBot|harvest|HarvestMan|Hatena\ Antenna|Hawler|Hazel's\ Ferret\ hopper|hcat|hclsreport-crawler|HD\ nutch\ agent|Header_Test_Client|healia|Helix|hijbul-heritrix-crawler|HiScan|HiSoftware\ AccMonitor|HiSoftware\ AccVerify|hitcrawler_|hivaBot|hloader|HMSEbot|HMView|hoge|holmes|HomePageSearch|Hooblybot-Image|HooWWWer|Hostcrawler|HSFT\ -\ Link|HSFT\ -\ LVU|HSlide|ht:|htdig|Html\ Link\ Validator|HTMLParser|HTTP::Lite|httplib|HTTrack|Huaweisymantecspider|hul-wax|humanlinks|HyperEstraier|Hyperix).*$ [NC,OR]
+
+RewriteCond %{HTTP_USER_AGENT} ^.*(ia_archiver|IAArchiver-|ibuena|iCab|ICDS-Ingestion|ichiro|iCopyright\ Conductor|id-search|IDBot|IEAutoDiscovery|IECheck|iHWebChecker|IIITBOT|iim_405|IlseBot|IlTrovatore|Iltrovatore-Setaccio|ImageBot|imagefortress|ImagesHereImagesThereImagesEverywhere|ImageVisu|imds_monitor|imo-google-robot-intelink|IncyWincy|Industry\ Cortexcrawler|Indy\ Library|indylabs_marius|InelaBot|Inet32\ Ctrl|inetbot|InfoLink|INFOMINE|infomine.ucr.edu|InfoNaviRobot|Informant|Infoseek|InfoTekies|InfoUSABot|INGRID|Inktomi|InsightsCollector|InsightsWorksBot|InspireBot|InsumaScout|Intelix|InterGET|Internet\ Ninja|InternetLinkAgent|Interseek|IOI|ip-web-crawler.com|IPAdd|Ipselonbot|Iria|IRLbot|Iron33|Isara|iSearch|iSiloX|IsraeliSearch|IstellaBot|its-learning|IU_CSCI_B659_class_crawler|iVia|iVia\ Page\ Fetcher|JadynAve|JadynAveBot|jakarta|Jakarta\ Commons-HttpClient|Java|Jbot|JemmaTheTourist|JennyBot|Jetbot|JetBrains\ Omea\ Pro|JetCar|Jim|JoBo|JobSpider_BA|JOC|JoeDog|JoyScapeBot|JSpyda|JubiiRobot|jumpstation|Junut|JustView|Jyxobot|K.S.Bot|KakcleBot|kalooga|KaloogaBot|kanagawa|KATATUDO-Spider|Katipo|kbeta1|Kenjin.Spider|KeywenBot|Keyword.Density|Keyword\ Density|kinjabot|KIT-Fireball|Kitenga-crawler-bot|KiwiStatus|kmbot-|kmccrew|Knight|KnowItAll|Knowledge.com|Knowledge\ Engine|KoepaBot|Koninklijke|KrOWLer|KSbot|kuloko-bot|kulturarw3|KummHttp|Kurzor|Kyluka|L.webis|LabelGrab|Labhoo|labourunions411|lachesis|Lament|LamerExterminator|LapozzBot|larbin|LARBIN-EXPERIMENTAL|LBot|LeapTag|LeechFTP|LeechGet|LetsCrawl.com|LexiBot|LexxeBot|lftp|libcrawl|libiViaCore|libWeb|libwww|libwww-perl|likse|Linguee|Link|link_checker|LinkAlarm|linkbot|LinkCheck\ by\ Siteimprove.com|LinkChecker|linkdexbot|linkdex.com|LinkextractorPro|LinkLint|linklooker|Linkman|LinkScan|LinksCrawler|LinksManager.com_bot|LinkSweeper|linkwalker|LiteFinder|LitlrBot|Little\ Grabber\ at\ Skanktale.com|Livelapbot|LM\ Harvester|LMQueueBot|LNSpiderguy|LoadTimeBot|LocalcomBot|locust|LolongBot|LookBot|Lsearch|lssbot|LWP|lwp-request|lwp-trivial|LWP::Simple|Lycos_Spider|Lydia\ Entity|LynnBot|Lytranslate|Mag-Net|Magnet|magpie-crawler|Magus|Mail.Ru|Mail.Ru_Bot|MAINSEEK_BOT|Mammoth|MarkWatch|MaSagool|masidani_bot_|Mass|Mata.Hari|Mata\ Hari|matentzn\ at\ cs\ dot\ man\ dot\ ac\ dot\ uk|maxamine.com--robot|maxamine.com-robot|maxomobot|Maxthon$|McBot|MediaFox|medrabbit|Megite|MemacBot|Memo|MendeleyBot|Mercator-|mercuryboard_user_agent_sql_injection.nasl|MerzScope|metacarta|Metager2|metager2-verification-bot|MetaGloss|METAGOPHER|metal|metaquerier.cs.uiuc.edu|METASpider|Metaspinner|MetaURI|MetaURI\ API|MFC_Tear_Sample|MFcrawler|MFHttpScan|Microsoft.URL|MIIxpc|miner|mini-robot|minibot|miniRank|Mirror|Missigua\ Locator|Mister.PiX|Mister\ PiX|Miva|MJ12bot|mnoGoSearch|mod_accessibility|moduna.com|moget|MojeekBot|MOMspider|MonkeyCrawl|MOSES|Motor|mowserbot|MQbot|MSE360|MSFrontPage|MSIECrawler|MSIndianWebcrawl|MSMOBOT|Msnbot|msnbot-products|MSNPTC|MSRBOT|MT-Soft|MultiText|My_Little_SearchEngine_Project|my-heritrix-crawler|MyApp|MYCOMPANYBOT|mycrawler|MyEngines-US-Bot|MyFamilyBot|Myra|nabot|nabot_|Najdi.si|Nambu|NAMEPROTECT|NatchCVS|naver|naverbookmarkcrawler|NaverBot|Navroad|NearSite|NEC-MeshExplorer|NeoScioCrawler|NerdByNature.Bot|NerdyBot|Nerima-crawl-).*$ [NC,OR]
+
+RewriteCond %{HTTP_USER_AGENT} ^.*(Nessus|NESSUS::SOAP|nestReader|Net::Trackback|NetAnts|NetCarta\ CyberPilot\ Pro|Netcraft|NetID.com|NetMechanic|Netprospector|NetResearchServer|NetScoop|NetSeer|NetShift=|NetSongBot|Netsparker|NetSpider|NetSrcherP|NetZip|NetZip-Downloader|NewMedhunt|news|News_Search_App|NewsGatherer|Newsgroupreporter|NewsTroveBot|NextGenSearchBot|nextthing.org|NHSEWalker|nicebot|NICErsPRO|niki-bot|NimbleCrawler|nimbus-1|ninetowns|Ninja|NjuiceBot|NLese|Nogate|Nomad-V2.x|NoteworthyBot|NPbot|NPBot-|NRCan\ intranet|NSDL_Search_Bot|nu_tch-princeton|nuggetize.com|nutch|nutch1|NutchCVS|NutchOrg|NWSpider|Nymesis|nys-crawler|ObjectsSearch|oBot|Obvius\ external\ linkcheck|Occam|Ocelli|Octopus|ODP\ entries|Offline.Explorer|Offline\ Explorer|Offline\ Navigator|OGspider|OmiExplorer_Bot|OmniExplorer_Bot|omnifind|OmniWeb|OnetSzukaj|online\ link\ validator|OOZBOT|Openbot|Openfind|Openfind\ data|OpenHoseBot|OpenIntelligenceData|OpenISearch|OpenSearchServer_Bot|OpiDig|optidiscover|OrangeBot|ORISBot|ornl_crawler_1|ORNL_Mercury|osis-project.jp|OutfoxBot|OutfoxMelonBot|OWLER-BOT|owsBot|ozelot|P3P\ Client|page_verifier|PageBitesHyperBot|Pagebull|PageDown|PageFetcher|PageGrabber|PagePeeker|PageRank\ Monitor|pamsnbot.htm|Panopy|panscient.com|Pansophica|Papa\ Foto|PaperLiBot|parasite|parsijoo|Pathtraq|Pattern|Patwebbot|pavuk|PaxleFramework|PBBOT|pcBrowser|pd-crawler|PECL::HTTP|Pcore-HTTP|penthesila|PeoplePal|perform_crawl|PerMan|PGP-KA|PHPCrawl|PhpDig|PicoSearch|pipBot|pipeLiner|Pita|pixfinder|PiyushBot|planetwork|PleaseCrawl|Plucker|Plukkie|Plumtree|Pockey|Pockey-GetHTML|PoCoHTTP|pogodak.ba|Pogodak.co.yu|Poirot|polybot|Pompos|Poodle\ predictor|PopScreenBot|PostPost|PrivacyFinder|ProjectWF-java-test-crawler|ProPowerBot|ProWebWalker|psbot|psbot-page|PSS-Bot|psycheclone|pub-crawler|pucl|pulseBot\ \(pulse|Pump|purebot|PWeBot|pycurl|Python-urllib|pythonic-crawler|PythonWikipediaBot|q1|QEAVis\ agent|QFKBot|qualidade|Qualidator.com|QuepasaCreep|QueryN.Metasearch|QueryN\ Metasearch|quest.durato|Quintura-Crw|QunarBot|Qweery_robot.txt_CheckBot|QweeryBot|r2iBot|R6_CommentReader|R6_FeedFetcher|R6_VoteReader|RaBot|Radian6|radian6_linkcheck|RAMPyBot|RankurBot|RcStartBot|RealDownload|Reaper|REBI-shoveler|Recorder|RedBot|RedCarpet|ReGet|RepoMonkey|RepoMonkey\ Bait|Riddler|RIIGHTBOT|RiseNetBot|RiverglassScanner|RMA|RoboPal|Robosourcer|robot|robotek|robots|Robozilla|rogerBot|Rome\ Client|Rondello|Rotondo|Roverbot|RPT-HTTPClient|rtgibot|RufusBot|Runnk\ online\ rss\ reader|SafetyNet|s~stremor-crawler|S2Bot|SafariBookmarkChecker|SaladSpoon|Sapienti|SBIder|SBL-BOT|SCFCrawler|Scich|ScientificCommons.org|ScollSpider|ScooperBot|Scooter|ScoutJet|ScrapeBox|Scrapy|SCrawlTest|Scrubby|scSpider|Scumbot|SeaMonkey$|Search-Channel|Search-Engine-Studio|search.KumKie.com|search.msn.com|search.updated.com|search.usgs.gov|Search\ Publisher|Searcharoo.NET|SearchBlox|searchbot|searchengine|searchhippo.com|SearchIt-Bot|searchmarking|searchmarks|searchmee_v|SearchmetricsBot|searchmining|SearchnowBot_v1|searchpreview|SearchSpider.com|SearQuBot|Seekbot|Seeker.lookseek.com|SeeqBot|seeqpod-vertical-crawler|Selflinkchecker|Semager|semanticdiscovery|Semantifire1|semisearch|SemrushBot|Senrigan|SEOENGWorldBot|ShablastBot|ShadowWebAnalyzer|Shareaza|Shelob|sherlock|ShopWiki|ShowLinks|ShowyouBot|siclab|silk|Siphon|SiteArchive|SiteCheck-sitecrawl|sitecheck.internetseer.com|SiteFinder|SiteGuardBot|SiteOrbiter|SiteSnagger|SiteSucker|SiteSweeper|SiteXpert|SkimBot|SkimWordsBot|SkreemRBot|skygrid|Skywalker|Sleipnir|slow-crawler|SlySearch|smart-crawler|SmartDownload|Smarte|smartwit.com|Snake|Snapbot|SnapPreviewBot|Snappy|snookit|Snooper|Snoopy|SocialSearcher|SocSciBot|SOFT411\ Directory|sogou|sohu-search|sohu\ agent|Sokitomi|Solbot|sootle|Sosospider|Space\ Bison|Space\ Fung|SpaceBison|SpankBot|spanner|Spatineo\ Monitor\ Controller|special_archiver|SpeedySpider|Sphider|Sphider2|spider|Spider.TerraNautic.net|SpiderEngine|SpiderKU|SpiderMan|Spinn3r|Spinne|sportcrew-Bot|spyder3.microsys.com|sqlmap|Squid-Prefetch|SquidClamAV_Redirector|Sqworm|SrevBot|sslbot|SSM\ Agent|StackRambler|StarDownloader|statbot|statcrawler|statedept-crawler|Steeler|STEGMANN-Bot|stero|Stripper|Stumbler|suchclip|sucker|SumeetBot|SumitBot|SummizeBot|SummizeFeedReader|SuperBot|superbot.com|SuperHTTP|SuperLumin|SuperPagesBot|Supybot|SURF|Surfbot|SurfControl|SurveyBot|suzuran|SWEBot|swish-e|SygolBot|SynapticWalker|Syntryx\ ANT\ Scout\ Chassis\ Pheromone|SystemSearch-robot|Szukacz).*$ [NC,OR]
+
+RewriteCond %{HTTP_USER_AGENT} ^.*(T-H-U-N-D-E-R-S-T-O-N-E|Tailrank|tAkeOut|TAMU_CRAWLER|TapuzBot|Tarantula|targetblaster.com|TargetYourNews.com|TAUSDataBot|taxinomiabot|Tecomi|TeezirBot|Teleport|Teleport\ Pro|TeleportPro|Telesoft|Teradex\ Mapper|TERAGRAM_CRAWLER|TerrawizBot|testbot|testing\ of|TextBot|thatrobotsite.com|The.Intraformant|The\ Dyslexalizer|The\ Intraformant|TheNomad|Theophrastus|theusefulbot|TheUsefulbot_|ThumbBot|thumbshots-de-bot|tigerbot|TightTwatBot|TinEye|Titan|to-dress_ru_bot_|to-night-Bot|toCrawl|Topicalizer|topicblogs|Toplistbot|TopServer\ PHP|topyx-crawler|Touche|TourlentaScanner|TPSystem|TRAAZI|TranSGeniKBot|travel-search|TravelBot|TravelLazerBot|Treezy|TREX|TridentSpider|Trovator|True_Robot|tScholarsBot|TsWebBot|TulipChain|turingos|turnit|TurnitinBot|TutorGigBot|TweetedTimes|TweetmemeBot|TwengaBot|TwengaBot-Discover|Twiceler|Twikle|twinuffbot|Twisted\ PageGetter|Twitturls|Twitturly|TygoBot|TygoProwler|Typhoeus|U.S.\ Government\ Printing\ Office|uberbot|ucb-nutch|UCSD-Crawler|UdmSearch|UFAM-crawler-|Ultraseek|UnChaos|unchaos_crawler_|UnisterBot|UniversalSearch|UnwindFetchor|UofTDB_experiment|updated|URI::Fetch|url_gather|URL-Checker|URL\ Control|URLAppendBot|URLBlaze|urlchecker|urlck|UrlDispatcher|urllib|URLSpiderPro|URLy.Warning|USAF\ AFKN\|usasearch|USS-Cosmix|USyd-NLP-Spider|Vacobot|Vacuum|VadixBot|Vagabondo|Validator|Valkyrie|vBSEO|VCI|VerbstarBot|VeriCiteCrawler|Verifactrola|Verity-URL-Gateway|vermut|versus|versus.integis.ch|viasarchivinginformation.html|vikspider|VIP|VIPr|virus-detector|VisBot|Vishal\ For\ CLIA|VisWeb|vlad|vlsearch|VMBot|VocusBot|VoidEYE|VoilaBot|Vortex|voyager|voyager-hc|voyager-partner-deep|VSE|vspider).*$ [NC,OR]
+
+RewriteCond %{HTTP_USER_AGENT} ^.*(W3C_Unicorn|W3C-WebCon|w3m|w3search|wacbot|wastrix|Water\ Conserve|Water\ Conserve\ Portal|WatzBot|wauuu\ engine|Wavefire|Waypath|Wazzup|Wazzup1.0.4800|wbdbot|web-agent|Web-Sniffer|Web.Image.Collector|Web\ CEO\ Online|Web\ Image\ Collector|Web\ Link\ Validator|Web\ Magnet|webalta|WebaltBot|WebAuto|webbandit|webbot|webbul-bot|WebCapture|webcheck|Webclipping.com|webcollage|WebCopier|WebCopy|WebCorp|webcrawl.net|webcrawler|WebDownloader\ for|Webdup|WebEMailExtrac|WebEMailExtrac.*|WebEnhancer|WebFerret|webfetch|WebFetcher|WebGather|WebGo\ IS|webGobbler|WebImages|Webinator-search2.fasthealth.com|Webinator-WBI|WebIndex|WebIndexer|weblayers|WebLeacher|WeblexBot|WebLinker|webLyzard|WebmasterCoffee|WebmasterWorld|WebmasterWorldForumBot|WebMiner|WebMoose|WeBot|WebPix|WebReaper|WebRipper|WebSauger|Webscan|websearchbench|WebSite|websitemirror|WebSpear|websphinx.test|WebSpider|Webster|Webster.Pro|Webster\ Pro|WebStripper|WebTrafficExpress|WebTrends\ Link\ Analyzer|webvac|webwalk|WebWalker|Webwasher|WebWatch|WebWhacker|WebXM|WebZip|Weddings.info|wenbin|WEPA|WeRelateBot|Whacker|Widow|WikiaBot|Wikio|wikiwix-bot-|WinHttp.WinHttpRequest|WinHTTP\ Example|WIRE|wired-digital-newsbot|WISEbot|WISENutbot|wish-la|wish-project|wisponbot|WMCAI-robot|wminer|WMSBot|woriobot|worldshop|WorQmada|Wotbox|WPScan|wume_crawler|WWW-Mechanize|www.freeloader.com.|WWW\ Collector|WWWOFFLE|wwwrobot|wwwster|WWWWanderer|wwwxref|Wysigot|X-clawler|Xaldon|Xenu|Xenu's|Xerka\ MetaBot|XGET|xirq|XmarksFetch|XoviBot|xqrobot|Y!J|Y!TunnelPro|yacy.net|yacybot|yarienavoir.net|Yasaklibot|yBot|YebolBot|yellowJacket|yes|YesupBot|Yeti|YioopBot|YisouSpider|yolinkBot|yoogliFetchAgent|yoono|Yoriwa|YottaCars_Bot|you-dir|Z-Add\ Link|zagrebin|Zao|zedzo.digest|zedzo.validate|zermelo|Zeus|Zeus\ Link\ Scout|zibber-v|zimeno|Zing-BottaBot|ZipppBot|zmeu|ZoomSpider|ZuiBot|ZumBot|Zyborg|Zyte).*$ [NC]
+
+RewriteRule .* - [F,L]
+</IfModule>
+# Abuse bot blocking rule end
+
+# Abuse HTTP Referrer Blocking. 
+# Blocking referrer domains stops traffic originating from the specified domains
+# Feel free to edit this custom list for your site requirements:
+<IfModule mod_rewrite.c>
+RewriteCond %{HTTP_REFERER} 100dollars-seo.com\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} best-seo-offer\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} buttons-for-your-website\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} free-social-buttions\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} semalt\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} todaperfeita\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} www1.free-social-buttons\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} www2.free-social-buttons\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} www3.free-social-buttons\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} www4.free-social-buttons\.com [NC]
+RewriteRule .* - [F,L]
+</IfModule>
+
+# To block IP addresses, see example format below. Add to list as needed:
+deny from 46.183.219.91
+
+# End HackRepair.com Blacklist, http://pastebin.com/BPRv4TDd
+#
+# Not affiliated shout-outs for bad bots related research:
+# http://www.botreports.com/badbots/
+# https://en.wikipedia.org/wiki/User_agent
+# http://chrispederick.com/work/user-agent-switcher/
+
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+<IfModule php5_module>
+   php_flag asp_tags Off
+   php_flag display_errors Off
+   php_value max_execution_time 18000
+   php_value max_input_time 12
+   php_value max_input_vars 1000
+   php_value memory_limit 8G
+   php_value post_max_size 8M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php56"
+   php_value upload_max_filesize 250M
+   php_flag zlib.output_compression On
+</IfModule>
+<IfModule lsapi_module>
+   php_flag asp_tags Off
+   php_flag display_errors Off
+   php_value max_execution_time 18000
+   php_value max_input_time 12
+   php_value max_input_vars 1000
+   php_value memory_limit 8G
+   php_value post_max_size 8M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php56"
+   php_value upload_max_filesize 250M
+   php_flag zlib.output_compression On
+</IfModule>
+# END cPanel-generated php ini directives, do not edit
+
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+deny from 94.5.152.107
+deny from 94.5.152.1
+deny from 94.5.152.2/31
+deny from 94.5.152.4/30
+deny from 94.5.152.8/29
+deny from 94.5.152.16/28
+deny from 94.5.152.32/27
+deny from 94.5.152.64/26
+deny from 94.5.152.128/25
+deny from 54.208.94.194
+deny from 52.34.76.65
+deny from 97.90.207.230
+deny from 24.44.241.10
+deny from 73.189.103.248
+deny from 179.220.255.143

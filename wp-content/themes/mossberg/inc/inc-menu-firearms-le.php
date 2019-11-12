@@ -1,0 +1,14 @@
+<div class="sidebar_menu_type" onclick="toggle_slide('le-nav')">LAW ENFORCEMENT</div>
+<div id="le-nav" class="sidebar_menu_subtypes">
+<div class="sidebar_menu_links"><a href="https://www.mossberg.com/law-enforcement/" >Law Enforcement</a><a href="https://www.mossberg.com/law-enforcement/armorer-training/" >Armorer Training</a><a href="https://www.mossberg.com/law-enforcement/distributors/" >LE Distributors</a><a href="https://www.mossberg.com/law-enforcement/firearm-testing-evaluation/" >Firearm Testing &#038; Evaluation</a><a href="https://www.mossberg.com/law-enforcement/le-service-support/" >LE Service & Support</a></div>
+</div><div class="sidebar_menu_type" onclick="toggle_slide('type96')">FIREARMS</div>
+<div id="type96" class="sidebar_menu_subtypes"><div class="sidebar_menu_subtype" onclick="toggle_slide('category9')">RIFLES</div>
+		<div id="category9" class="sidebar_menu_subtypes" style="display:block;">
+		<div class="sidebar_menu_links"><a href="https://www.mossberg.com/category/series/mossberg-patriot/mossberg-patriot-night-train//?le=1/" id="series78" class="">Mossberg® Patriot™ - Night Train™</a><a href="https://www.mossberg.com/category/series/mvp-series/mvp-patrol//?le=1/" id="series73" class="">MVP® Patrol</a><a href="https://www.mossberg.com/category/series/mvp-series/mvp-scout//?le=1/" id="series72" class="">MVP® Scout</a><a href="https://www.mossberg.com/category/series/mvp-series/mvp-lr-long-range//?le=1/" id="series71" class="">MVP®-LR (Long Range)</a></div>
+		</div><div class="sidebar_menu_subtype" onclick="toggle_slide('category10')">SHOTGUNS</div>
+		<div id="category10" class="sidebar_menu_subtypes" style="display:block;">
+		<div class="sidebar_menu_links"><a href="https://www.mossberg.com/category/series/500/500-tactical//?le=1/" id="series112" class="">500® Tactical</a><a href="https://www.mossberg.com/category/series/590-tactical//?le=1/" id="series113" class="">590® Tactical</a><a href="https://www.mossberg.com/category/series/590a1-tactical//?le=1/" id="series57" class="">590A1™ Tactical</a><a href="https://www.mossberg.com/category/series/590a1-class-iii//?le=1/" id="series408" class="">590A1™ Class III Shotguns</a><a href="https://www.mossberg.com/category/series/500-cruiser//?le=1/" id="series627" class="">Cruiser® Models</a><a href="https://www.mossberg.com/category/series/930/930-tactical//?le=1/" id="series63" class="">930™ Tactical</a></div>
+		</div><div class="sidebar_menu_subtype" onclick="toggle_slide('category629')">PISTOL GRIP / AOW / NFA</div>
+		<div id="category629" class="sidebar_menu_subtypes" style="display:block;">
+		<div class="sidebar_menu_links"><a href="https://www.mossberg.com/category/series/500-cruiser//?le=1/" id="series627" class="">Cruiser® Models</a></div>
+		</div></div>

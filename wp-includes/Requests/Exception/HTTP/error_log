@@ -1,0 +1,1 @@
+[12-Oct-2019 19:58:50 UTC] PHP Fatal error:  Class 'Requests_Exception_HTTP' not found in /data/mossberg/public_html/wp-includes/Requests/Exception/HTTP/404.php on line 13

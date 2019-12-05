@@ -70,7 +70,7 @@ wp_reset_query();
 <?php
 // Promos
 date_default_timezone_set('America/New_York');
-$args = array('category'=>'promo-countdown','posts_per_page'=>'-1','order'=>'asc','meta_key'=>'Promo Countdown Date','orderby'=>'meta_value_num');
+$args = array('category_name'=>'promo-countdown','posts_per_page'=>'-1','orderby'=>'date','order'=>'asc');
 query_posts($args);
 $count = 0;
 while(have_posts()):the_post();
@@ -106,7 +106,8 @@ while(have_posts()):the_post();
 	}
 	
 	// Timer
-	echo "<a href=\"$block_link\" class=\"$block_class\" style=\"$block_style\" id=\"timer{$count}\">
+	echo "<div class=\"promo_countdown_background\">
+	<a href=\"$block_link\" class=\"$block_class\" style=\"$block_style\" id=\"timer{$count}\">
 	<div class=\"promo_countdown_date desktop\">
 	<div class=\"promo_countdown_month\">$countdown_month</div>
 	<div class=\"promo_countdown_day\">$countdown_day</div>
@@ -122,7 +123,8 @@ while(have_posts()):the_post();
 	<div class=\"promo_countdown_timer_block\">Days<span class=\"promo_countdown_timer_clock days\"></span></div><span class=\"promo_countdown_timer_sep\">:</span><div class=\"promo_countdown_timer_block\">Hours<span class=\"promo_countdown_timer_clock hours\"></span></div><span class=\"promo_countdown_timer_sep\">:</span><div class=\"promo_countdown_timer_block\">Minutes<span class=\"promo_countdown_timer_clock minutes\"></span></div><span class=\"promo_countdown_timer_sep\">:</span><div class=\"promo_countdown_timer_block\">Seconds<span class=\"promo_countdown_timer_clock seconds\"></span></div>
 	</div>		
 	</div>
-	</a>";
+	</a>
+	</div>";
 	$count++;
 endwhile;
 wp_reset_query();

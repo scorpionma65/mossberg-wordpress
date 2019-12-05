@@ -7,7 +7,7 @@ require_once('../mysql/inc-mysql-connect-magento.php');
 date_default_timezone_set('America/New_York');
 $start_hour = date('Y-m-d H:i:00', strtotime('-2 hours'));
 $end_hour = date('Y-m-d H:i:00', strtotime('-1 hour'));
-$week_begin = '2018-11-18 23:00:00';
+$week_begin = '2019-11-25 00:00:00';
 
 // Display
 $start_day_display = date('M j, Y', strtotime('-1 hour'));
@@ -66,14 +66,14 @@ echo mysql_error();
 
 $campaign .= "</table>";
 
-echo "<h1>Holiday Hourly Sales Report<br/>$start_day_display<br/>$start_hour_display - $end_hour_display</h1>
+echo "<h1>Hourly Sales Report<br/>$start_day_display<br/>$start_hour_display - $end_hour_display</h1>
 <h3>Hourly Sales</h3>$sales<br/><br/>
 <h3>Campaign Total Sales</h3>$campaign";
 
 // Email
 $email_from = 'estore@mossberg.com';
-$email_subject = "Mossberg Holiday Hourly Sales Report -  $start_day_display $end_hour_display";
-$email_body = "<h1>Mossberg Holiday Hourly Sales Report<br/>$start_day_display | $start_hour_display - $end_hour_display</h1><h3>Hourly Sales</h3>$sales<br/><h3>Campaign Total Sales</h3>$campaign";
+$email_subject = "Mossberg Hourly Sales Report -  $start_day_display $end_hour_display";
+$email_body = "<h1>Mossberg Hourly Sales Report<br/>$start_day_display | $start_hour_display - $end_hour_display</h1><h3>Hourly Sales</h3>$sales<br/><h3>Campaign Total Sales</h3>$campaign";
 $email_headers = "From: $email_from" . "\r\n" . "Reply-To: $email_from" . "\r\n" . 'X-Mailer: PHP/' . phpversion();
 
 // PHP Mailer
@@ -92,6 +92,7 @@ $mail->Username = 'azuresmtp@mossberg.com';
 $mail->Password = '#Hab74Rt';
 $mail->setFrom($email_from, 'Mossberg Store');
 $mail->addReplyTo($email_from, 'Mossberg Store');
+$mail->addAddress('billthode@brilliantinternet.com', 'Snyder BT');
 $mail->addAddress('wbeighley@mossberg.com', 'Mossberg WB');
 $mail->Subject = $email_subject;
 $mail->msgHTML($email_body);

@@ -889,15 +889,16 @@ a.sidebar_menu_type_schematic { color:#FFF; text-transform:uppercase; text-decor
 .promo_sidebar .hs-form .inputs-list li { margin:0px 0px 5px 0px; padding:0px; }
 .promo_sidebar .submitted-message { margin:15px 0px 0px 0px; padding:0px; color:#FFF; font-size:18px; line-height:24px; text-align:left; font-family:'ITCFranklinGothicW01-Dm_812668'; }
 .promo_countdown_container { margin:0px 25px 30px 25px; padding:0px; font-size:14px; line-height:22px; text-align:left; overflow:auto; }
-.promo_countdown_block { display:block; margin:0px 0px 20px 0px; padding:0px; background:url(template/background/background-promo-countdown.jpg) center; background-size:cover; border-radius:5px; overflow:auto; cursor:default!important; }
-.promo_countdown_block_released { display:block; margin:0px 0px 20px 0px; padding:0px; background-color:#111; background-position:85% center; background-repeat:no-repeat; background-size:contain; border-radius:5px; overflow:auto; }
+.promo_countdown_background { display:block; margin:0px 0px 20px 0px; padding:0px; background:url(template/background/background-promo-countdown.jpg) center; background-size:cover; border-radius:5px; overflow:auto; }
+.promo_countdown_block { display:block; margin:0px; padding:0px; border-radius:5px; overflow:auto; cursor:default!important; }
+.promo_countdown_block_released { display:block; margin:0px; padding:0px; background-position:85% center; background-repeat:no-repeat; background-size:contain; border-radius:5px; overflow:auto; }
 .promo_countdown_date { display:inline-block; width:125px; margin:25px; padding:0px; float:left; overflow:auto; }
-.promo_countdown_month { margin:0px; padding:8px 0px; color:#000; font-size:17px; line-height:18px; text-align:center; border-radius:0px; border-top:2px solid #000; border-left:2px solid #000; border-right:2px solid #000; text-transform:uppercase; font-family:'Eurostile LT W01 Demi1391154'; }
-.promo_countdown_day { margin:0px; padding:0px 0px 10px 0px; color:#FFF; font-size:75px; line-height:75px; text-align:center; letter-spacing:-5px; border-radius:0px 0px 0px 0px; border-left:2px solid #000; border-right:2px solid #000;text-transform:uppercase; font-family:'Eurostile LT W01 Bold1391134'; }
-.promo_countdown_weekday { margin:0px; padding:10px 0px 10px 0px; color:#000; font-size:17px; line-height:18px; text-align:center; border-radius:0px; border:2px solid #000; text-transform:uppercase; font-family:'Eurostile LT W01 Demi1391154'; }
+.promo_countdown_month { margin:0px; padding:8px 0px; color:#FFC600; font-size:17px; line-height:18px; text-align:center; background:#000; border-radius:0px; border-top:2px solid #FFC600; border-left:2px solid #FFC600; border-right:2px solid #FFC600; text-transform:uppercase; font-family:'Eurostile LT W01 Demi1391154'; }
+.promo_countdown_day { margin:0px; padding:0px 0px 10px 0px; color:#FFF; font-size:75px; line-height:75px; text-align:center; letter-spacing:-5px; background:#000; border-radius:0px 0px 0px 0px; border-left:2px solid #FFC600; border-right:2px solid #FFC600;text-transform:uppercase; font-family:'Eurostile LT W01 Bold1391134'; }
+.promo_countdown_weekday { margin:0px; padding:10px 0px 10px 0px; color:#FFC600; font-size:17px; line-height:18px; text-align:center; border-radius:0px; background:#000; border:2px solid #FFC600; text-transform:uppercase; font-family:'Eurostile LT W01 Demi1391154'; }
 .promo_countdown_content { display:inline-block; width:66%; margin:25px 25px 25px 0px; padding:0px; float:right; overflow:auto; }
-.promo_countdown_title { margin:0px; padding:0px; color:#000; font-size:30px; line-height:30px; text-align:center; text-transform:uppercase; font-family:'ITCFranklinGothicW01-Hv_812689'; }
-.promo_countdown_unlock { margin:8px 0px 4px 0px; padding:0px; color:#000; font-size:15px; line-height:15px; text-align:center; text-transform:uppercase; font-family:'ITCFranklinGothicW01-Hv_812689'; }
+.promo_countdown_title { margin:0px; padding:0px 0px 8px 0px; color:#000; font-size:26px; line-height:26px; text-align:center; text-transform:uppercase; font-family:'ITCFranklinGothicW01-Hv_812689'; border-bottom:2px solid #000; }
+.promo_countdown_unlock { margin:8px 0px 4px 0px; padding:0px; color:#000; font-size:16px; line-height:16px; text-align:center; text-transform:uppercase; font-family:'ITCFranklinGothicW01-Md_812695'; }
 .promo_countdown_timer { display:block; margin:0px auto; padding:0px; text-align:center; }
 .promo_countdown_timer_block { display:inline-block; margin:0px 5px 0px 5px; color:#000; font-size:11px; line-height:20px; text-align:center; }
 .promo_countdown_timer_clock { display:block; padding:6px 8px; color:#FFF; font-size:46px; line-height:46px; background:#000; border-radius:5px; font-family:'ITCFranklinGothicW01-Dm_812668'; }

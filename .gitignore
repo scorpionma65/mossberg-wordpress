@@ -21,6 +21,13 @@ node_modules/
 *.log
 *.sql
 *.sqlite
+error_log
+
+# ignore cache files
+*.cache
 
 # ignore the magento store
 store/
+
+#ignore freshdesk attachments
+api/freshdesk/ffl/*

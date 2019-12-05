@@ -79,6 +79,8 @@ RewriteCond %{REMOTE_ADDR} !^24.188.246.132$
 RewriteCond %{REMOTE_ADDR} !^32.211.86.99$
 RewriteCond %{REMOTE_ADDR} !^104.245.19.241$
 RewriteCond %{REMOTE_ADDR} !^32.212.97.193$
+RewriteCond %{REMOTE_ADDR} !^184.155.145.194$
+RewriteCond %{REMOTE_ADDR} !^172.85.57.242$
 #I95
 RewriteCond %{REMOTE_ADDR} !^175.101.251.162$
 RewriteCond %{REMOTE_ADDR} !^175.101.251.163$
@@ -136,7 +138,7 @@ RewriteCond %{REQUEST_URI} ^(.*)?wp-admin$
 RewriteRule ^(.*)$ - [R=403,L]
 # DEVSTAGE Protect
 #RewriteRule ^(.*)$ http://www.mossberg.com/$1 [L]
-# MIGRATION Redirect
+# STORE MAINTENANCE Redirect
 #RewriteCond %{REQUEST_URI} ^/parts-and-accessories/?$ [OR] 
 #RewriteCond %{REQUEST_URI} ^/service/request/?$ 
 #RewriteCond %{REQUEST_URI} !/maintenance/?$ [NC]
@@ -838,6 +840,11 @@ Redirect 301 /centennialsweeps https://woobox.com/63e6xq
 Redirect 301 /CENTENNIALSWEEPS https://woobox.com/63e6xq
 Redirect 301 /Centennialsweeps https://woobox.com/63e6xq
 Redirect 301 /CentennialSweeps https://woobox.com/63e6xq
+Redirect 301 /mc1scoffer https://offers.mossberg.com/mc1scoffer
+Redirect 301 /Mc1scoffer https://offers.mossberg.com/mc1scoffer
+Redirect 301 /MC1SCOFFER https://offers.mossberg.com/mc1scoffer
+Redirect 301 /Mc1scOffer https://offers.mossberg.com/mc1scoffer
+Redirect 301 /MC1SCOffer https://offers.mossberg.com/mc1scoffer
 
 # Product
 RewriteRule ^product/(.*)/([0-9]+)/?$ /wp-content/themes/mossberg/redirect-product.php?id=$2 [NC,L]
@@ -1006,3 +1013,33 @@ deny from 97.90.207.230
 deny from 24.44.241.10
 deny from 73.189.103.248
 deny from 179.220.255.143
+deny from 37.146.126.202
+deny from 72.83.164.105
+deny from 64.237.237.208
+deny from 54.71.187.124
+deny from 54.70.53.60
+deny from 107.185.117.243
+deny from 47.205.126.154
+deny from 71.209.27.84
+deny from 174.193.201.138
+deny from 174.253.64.30
+deny from 75.130.193.97
+deny from 174.220.30.250
+deny from 98.118.252.109
+deny from 104.178.221.62
+deny from 99.121.64.178
+deny from 73.109.56.232
+deny from 65.32.95.245
+deny from 173.245.217.79
+deny from 89.238.142.234
+deny from 103.209.252.75
+deny from 138.122.233.245
+deny from 138.122.233.228
+deny from 95.27.234.117
+deny from 72.213.151.144
+deny from 209.107.204.104
+deny from 81.171.97.49
+deny from 81.171.108.151
+deny from 209.197.24.19
+deny from 138.122.233.241
+deny from 72.189.164.96

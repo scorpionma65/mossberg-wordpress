@@ -1043,3 +1043,7 @@ deny from 81.171.108.151
 deny from 209.197.24.19
 deny from 138.122.233.241
 deny from 72.189.164.96
+deny from 136.35.179.153
+deny from 173.245.217.112
+deny from 173.245.209.136
+deny from 138.122.234.222

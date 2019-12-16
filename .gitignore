@@ -26,6 +26,9 @@ error_log
 # ignore cache files
 *.cache
 
+# ignore the wp config (different per env)
+wp-config.php
+
 # ignore the magento store
 store/
 

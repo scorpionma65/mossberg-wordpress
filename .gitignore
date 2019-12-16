@@ -27,13 +27,18 @@ error_log
 # ignore cache files
 *.cache
 
-# ignore the wp config (different per env)
+# ignore the env specific files (different per env)
 wp-config.php
+robots.txt
+api/mysql/inc-mysql-connect-magento.php
+api/mysql/inc-mysql-connect.php
 
 # ignore the magento store
 store/
 
-#ignore freshdesk attachments
+# ignore freshdesk attachments
+api/freshdesk/ffl/
 ampi/freshdesk/ffl/*
 
+# ignore mac directory files
 .DS_Store

@@ -31,7 +31,7 @@ $header_class = 'header_container';
 <!-- Header -->
 <div class="<?php echo $header_class;?> desktop" id="header">
 <!-- Notice -->
-<div class="header_notice"><a href="http://www.mossberg.com/maverickhunterrecall/" target="_blank">Maverick Hunter&trade; Over/Under Recall Notice &raquo;</a></div>
+<div class="header_notice">Please refer to holiday shipping deadlines at checkout.</div>
 <!-- Notice -->
 
 <div class="header">

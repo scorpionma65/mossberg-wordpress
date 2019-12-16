@@ -30,4 +30,6 @@ error_log
 store/
 
 #ignore freshdesk attachments
-api/freshdesk/ffl/*
+ampi/freshdesk/ffl/*
+
+.DS_Store

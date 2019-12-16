@@ -13,6 +13,7 @@ wp-content/plugins/hello.php
 
 # ignore specific themes
 wp-content/themes/twenty*/
+wp-content/themes/mossberg/inc/configurator/*
 
 # ignore node dependency directories
 node_modules/

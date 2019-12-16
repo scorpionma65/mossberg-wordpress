@@ -1,7 +1,0 @@
-User-agent: *
-Disallow: /wp-admin/
-Disallow: /api/
-Crawl-Delay: 30
-#edward-added
-User-agent: AhrefsBot 
-Crawl-Delay: 30
